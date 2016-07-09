@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<database name="c:\\Chadi_backup\\Chadi2.fdb" type="firebird">
+</database>
+<server name="localhost">
+</server>
+</config>

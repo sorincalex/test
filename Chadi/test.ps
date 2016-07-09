@@ -1,0 +1,989 @@
+%-12345X@PJL JOB
+@PJL SET ECONOMODE = OFF
+@PJL SET PAPERTYPE = OFF
+@PJL ENTER LANGUAGE = POSTSCRIPT
+%!PS-Adobe-3.0
+%%Title: Java Printing
+%%Creator: PScript5.dll Version 5.2.2
+%%CreationDate: 3/31/2007 14:49:5
+%%For: scristes
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%Orientation: Portrait
+%%PageOrder: Special
+%%DocumentNeededResources: (atend)
+%%DocumentSuppliedResources: (atend)
+%%DocumentData: Clean7Bit
+%%TargetDevice: (Xerox WC M20) (3010    ) 0
+%%LanguageLevel: 3
+%%EndComments
+
+%%BeginDefaults
+%%PageBoundingBox: 13 13 599 780
+%%ViewingOrientation: 1 0 0 1
+%%EndDefaults
+
+
+%%BeginProlog
+%%BeginResource: file Pscript_WinNT_ErrorHandler 5.0 0
+/currentpacking where{pop/oldpack currentpacking def/setpacking where{pop false
+setpacking}if}if/$brkpage 64 dict def $brkpage begin/prnt{dup type/stringtype
+ne{=string cvs}if dup length 6 mul/tx exch def/ty 10 def currentpoint/toy exch
+def/tox exch def 1 setgray newpath tox toy 2 sub moveto 0 ty rlineto tx 0
+rlineto 0 ty neg rlineto closepath fill tox toy moveto 0 setgray show}bind def
+/nl{currentpoint exch pop lmargin exch moveto 0 -10 rmoveto}def/=={/cp 0 def
+typeprint nl}def/typeprint{dup type exec}readonly def/lmargin 72 def/rmargin 72
+def/tprint{dup length cp add rmargin gt{nl/cp 0 def}if dup length cp add/cp
+exch def prnt}readonly def/cvsprint{=string cvs tprint( )tprint}readonly def
+/integertype{cvsprint}readonly def/realtype{cvsprint}readonly def/booleantype
+{cvsprint}readonly def/operatortype{(--)tprint =string cvs tprint(-- )tprint}
+readonly def/marktype{pop(-mark- )tprint}readonly def/dicttype{pop
+(-dictionary- )tprint}readonly def/nulltype{pop(-null- )tprint}readonly def
+/filetype{pop(-filestream- )tprint}readonly def/savetype{pop(-savelevel- )
+tprint}readonly def/fonttype{pop(-fontid- )tprint}readonly def/nametype{dup
+xcheck not{(/)tprint}if cvsprint}readonly def/stringtype{dup rcheck{(\()tprint
+tprint(\))tprint}{pop(-string- )tprint}ifelse}readonly def/arraytype{dup rcheck
+{dup xcheck{({)tprint{typeprint}forall(})tprint}{([)tprint{typeprint}forall(])
+tprint}ifelse}{pop(-array- )tprint}ifelse}readonly def/packedarraytype{dup
+rcheck{dup xcheck{({)tprint{typeprint}forall(})tprint}{([)tprint{typeprint}
+forall(])tprint}ifelse}{pop(-packedarray- )tprint}ifelse}readonly def/courier
+/Courier findfont 10 scalefont def end errordict/handleerror{systemdict begin
+$error begin $brkpage begin newerror{/newerror false store vmstatus pop pop 0
+ne{grestoreall}if errorname(VMerror)ne{showpage}if initgraphics courier setfont
+lmargin 720 moveto errorname(VMerror)eq{userdict/ehsave known{clear userdict
+/ehsave get restore 2 vmreclaim}if vmstatus exch pop exch pop PrtVMMsg}{
+(ERROR: )prnt errorname prnt nl(OFFENDING COMMAND: )prnt/command load prnt
+$error/ostack known{nl nl(STACK:)prnt nl nl $error/ostack get aload length{==}
+repeat}if}ifelse systemdict/showpage get exec(%%[ Error: )print errorname
+=print(; OffendingCommand: )print/command load =print( ]%%)= flush}if end end
+end}dup 0 systemdict put dup 4 $brkpage put bind readonly put/currentpacking
+where{pop/setpacking where{pop oldpack setpacking}if}if
+%%EndResource
+userdict /Pscript_WinNT_Incr 230 dict dup begin put
+%%BeginResource: file Pscript_FatalError 5.0 0
+userdict begin/FatalErrorIf{{initgraphics findfont 1 index 0 eq{exch pop}{dup
+length dict begin{1 index/FID ne{def}{pop pop}ifelse}forall/Encoding
+{ISOLatin1Encoding}stopped{StandardEncoding}if def currentdict end
+/ErrFont-Latin1 exch definefont}ifelse exch scalefont setfont counttomark 3 div
+cvi{moveto show}repeat showpage quit}{cleartomark}ifelse}bind def end
+%%EndResource
+userdict begin/PrtVMMsg{vmstatus exch sub exch pop gt{[
+(This job requires more memory than is available in this printer.)100 500
+(Try one or more of the following, and then print again:)100 485
+(For the output format, choose Optimize For Portability.)115 470
+(In the Device Settings page, make sure the Available PostScript Memory is accurate.)
+115 455(Reduce the number of fonts in the document.)115 440
+(Print the document in parts.)115 425 12/Times-Roman showpage
+(%%[ PrinterError: Low Printer VM ]%%)= true FatalErrorIf}if}bind def end
+version cvi 2016 ge{/VM?{pop}bind def}{/VM? userdict/PrtVMMsg get def}ifelse
+105000 VM?
+%%BeginResource: file Pscript_Win_Basic 5.0 0
+/d/def load def/,/load load d/~/exch , d/?/ifelse , d/!/pop , d/`/begin , d/^
+/index , d/@/dup , d/+/translate , d/$/roll , d/U/userdict , d/M/moveto , d/-
+/rlineto , d/&/currentdict , d/:/gsave , d/;/grestore , d/F/false , d/T/true ,
+d/N/newpath , d/E/end , d/Ac/arc , d/An/arcn , d/A/ashow , d/D/awidthshow , d/C
+/closepath , d/V/div , d/O/eofill , d/L/fill , d/I/lineto , d/-c/curveto , d/-M
+/rmoveto , d/+S/scale , d/Ji/setfont , d/Lc/setlinecap , d/Lj/setlinejoin , d
+/Lw/setlinewidth , d/Lm/setmiterlimit , d/sd/setdash , d/S/show , d/LH/showpage
+, d/K/stroke , d/W/widthshow , d/R/rotate , d/L2? false/languagelevel where{pop
+languagelevel 2 ge{pop true}if}if d L2?{/xS/xshow , d/yS/yshow , d/zS/xyshow ,
+d}if/b{bind d}bind d/bd{bind d}bind d/xd{~ d}bd/ld{, d}bd/bn/bind ld/lw/Lw ld
+/lc/Lc ld/lj/Lj ld/sg/setgray ld/ADO_mxRot null d/self & d/OrgMx matrix
+currentmatrix d/reinitialize{: OrgMx setmatrix[/TextInit/GraphInit/UtilsInit
+counttomark{@ where{self eq}{F}?{cvx exec}{!}?}repeat cleartomark ;}b
+/initialize{`{/Pscript_Win_Data where{!}{U/Pscript_Win_Data & put}?/ADO_mxRot ~
+d/TextInitialised? F d reinitialize E}{U/Pscript_Win_Data 230 dict @ ` put
+/ADO_mxRot ~ d/TextInitialised? F d reinitialize}?}b/terminate{!{& self eq
+{exit}{E}?}loop E}b/suspend/terminate , d/resume{` Pscript_Win_Data `}b U `
+/lucas 21690 d/featurebegin{countdictstack lucas[}b/featurecleanup{stopped
+{cleartomark @ lucas eq{! exit}if}loop countdictstack ~ sub @ 0 gt{{E}repeat}
+{!}?}b E/snap{transform 0.25 sub round 0.25 add ~ 0.25 sub round 0.25 add ~
+itransform}b/dsnap{dtransform round ~ round ~ idtransform}b/nonzero_round{@ 0.5
+ge{round}{@ -0.5 lt{round}{0 ge{1}{-1}?}?}?}b/nonzero_dsnap{dtransform
+nonzero_round ~ nonzero_round ~ idtransform}b U<04>cvn{}put/rr{1 ^ 0 - 0 ~ -
+neg 0 - C}b/irp{4 -2 $ + +S fx 4 2 $ M 1 ^ 0 - 0 ~ - neg 0 -}b/rp{4 2 $ M 1 ^ 0
+- 0 ~ - neg 0 -}b/solid{[]0 sd}b/g{@ not{U/DefIf_save save put}if U/DefIf_bool
+2 ^ put}b/DefIf_El{if U/DefIf_bool get not @{U/DefIf_save get restore}if}b/e
+{DefIf_El !}b/UDF{L2?{undefinefont}{!}?}b/UDR{L2?{undefineresource}{! !}?}b
+/freeVM{/Courier findfont[40 0 0 -40 0 0]makefont Ji 2 vmreclaim}b/hfRedefFont
+{findfont @ length dict `{1 ^/FID ne{d}{! !}?}forall & E @ ` ~{/CharStrings 1
+dict `/.notdef 0 d & E d}if/Encoding 256 array 0 1 255{1 ^ ~/.notdef put}for d
+E definefont !}bind d/hfMkCIDFont{/CIDFont findresource @ length 2 add dict `{1
+^ @/FID eq ~ @/XUID eq ~/UIDBase eq or or{! !}{d}?}forall/CDevProc ~ d/Metrics2
+16 dict d/CIDFontName 1 ^ d & E 1 ^ ~/CIDFont defineresource ![~]composefont !}
+bind d
+%%EndResource
+%%BeginResource: file Pscript_Win_Utils_L2 5.0 0
+/rf/rectfill , d/fx{1 1 dtransform @ 0 ge{1 sub 0.5}{1 add -0.5}? 3 -1 $ @ 0 ge
+{1 sub 0.5}{1 add -0.5}? 3 1 $ 4 1 $ idtransform 4 -2 $ idtransform}b/BZ{4 -2 $
+snap + +S fx rf}b/rs/rectstroke , d/rc/rectclip , d/UtilsInit{currentglobal{F
+setglobal}if}b/scol{! setcolor}b/colspA/DeviceGray d/colspABC/DeviceRGB d
+/colspRefresh{colspABC setcolorspace}b/SetColSpace{colspABC setcolorspace}b
+/resourcestatus where{!/ColorRendering/ProcSet resourcestatus{! ! T}{F}?}{F}?
+not{/ColorRendering<</GetHalftoneName{currenthalftone @/HalftoneName known{
+/HalftoneName get}{!/none}?}bn/GetPageDeviceName{currentpagedevice @
+/PageDeviceName known{/PageDeviceName get @ null eq{!/none}if}{!/none}?}bn
+/GetSubstituteCRD{!/DefaultColorRendering/ColorRendering resourcestatus{! !
+/DefaultColorRendering}{(DefaultColorRendering*){cvn exit}127 string
+/ColorRendering resourceforall}?}bn>>/defineresource where{!/ProcSet
+defineresource !}{! !}?}if/buildcrdname{/ColorRendering/ProcSet findresource `
+mark GetHalftoneName @ type @/nametype ne ~/stringtype ne and{!/none}if(.)
+GetPageDeviceName @ type @/nametype ne ~/stringtype ne and{!/none}if(.)5 ^ 0 5
+-1 1{^ length add}for string 6 1 $ 5 ^ 5{~ 1 ^ cvs length 1 ^ length 1 ^ sub
+getinterval}repeat ! cvn 3 1 $ ! ! E}b/definecolorrendering{~ buildcrdname ~
+/ColorRendering defineresource !}b/findcolorrendering where{!}{
+/findcolorrendering{buildcrdname @/ColorRendering resourcestatus{! ! T}{
+/ColorRendering/ProcSet findresource ` GetSubstituteCRD E F}?}b}?
+/selectcolorrendering{findcolorrendering !/ColorRendering findresource
+setcolorrendering}b/G2UBegin{findresource/FontInfo get/GlyphNames2Unicode get
+`}bind d/G2CCBegin{findresource/FontInfo get/GlyphNames2HostCode get `}bind d
+/G2UEnd{E}bind d/AddFontInfoBegin{/FontInfo 8 dict @ `}bind d/AddFontInfo{
+/GlyphNames2Unicode 16 dict d/GlyphNames2HostCode 16 dict d}bind d
+/AddFontInfoEnd{E d}bind d/T0AddCFFMtx2{/CIDFont findresource/Metrics2 get ` d
+E}bind d
+%%EndResource
+end
+%%EndProlog
+
+%%BeginSetup
+statusdict begin (%%[ ProductName: ) print product print ( ]%%)= flush end
+[ 1 0 0 1 0 0 ] false Pscript_WinNT_Incr dup /initialize get exec
+featurebegin{
+%%BeginNonPPDFeature: JobTimeout 0
+0 /languagelevel where{pop languagelevel}{1}ifelse 2 ge{1 dict dup/JobTimeout  4 -1 roll put setuserparams}{statusdict/setjobtimeout get exec}ifelse
+%%EndNonPPDFeature
+}featurecleanup
+
+featurebegin{
+%%BeginNonPPDFeature: WaitTimeout 300
+300 /languagelevel where{pop languagelevel}{1}ifelse 2 ge{1 dict dup/WaitTimeout 4 -1 roll put setuserparams}{statusdict/waittimeout 3 -1 roll put}ifelse
+%%EndNonPPDFeature
+}featurecleanup
+
+featurebegin{
+%%BeginFeature: *PaperPolicy Promptuser
+
+   <</DeferredMediaSelection true>> setpagedevice
+%%EndFeature
+}featurecleanup
+featurebegin{
+%%BeginFeature: *Resolution 600dpi
+<</HWResolution [600 600]>> setpagedevice
+%%EndFeature
+}featurecleanup
+featurebegin{
+%%BeginFeature: *PageSize Letter
+<</PageSize [612 792] /ImagingBBox null>> setpagedevice
+%%EndFeature
+}featurecleanup
+featurebegin{
+%%BeginFeature: *Duplex None
+ <</Duplex false>> setpagedevice
+%%EndFeature
+}featurecleanup
+featurebegin{
+%%BeginFeature: *Option1 False
+
+%%EndFeature
+}featurecleanup
+1 setlinecap 1 setlinejoin
+/mysetup [ 72 600 V 0 0 -72 600 V 12.99968 780.00097 ] def 
+%%EndSetup
+
+userdict begin /ehsave save def end
+%%Page: 1 1
+%%PageBoundingBox: 13 13 599 780
+%%EndPageComments
+%%BeginPageSetup
+/DeviceRGB dup setcolorspace /colspABC exch def
+mysetup concat colspRefresh
+%%EndPageSetup
+
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Win_Dib_L2 5.0 0
+/iw 0 d/ih 0 d/im_save 0 d/s 0 d/polarity 0 d/smoothflag 0 d/mystring 0 d/bpc 0
+d/maskcolor 0 d/mask? F d/setup1asciiproc{[currentfile mystring/readhexstring
+cvx/! cvx]cvx bind}b/setup1binaryproc{[currentfile mystring/readstring cvx/!
+cvx]cvx bind}b/setup2asciiproc{currentfile/ASCII85Decode filter/RunLengthDecode
+filter}b/setup2binaryproc{currentfile/RunLengthDecode filter}b/jpegasciiproc
+{currentfile/ASCII85Decode filter<</Relax 1>>/DCTDecode filter}b/jpegbinaryproc
+{currentfile<</Relax 1>>/DCTDecode filter}b/mycolorspace{colspABC}d/myimagedict
+{/myimagedict 10 dict d myimagedict @ `/ImageType 1 d/MultipleDataSource F d E}
+b/imageprocarray[/setup1binaryproc/setup1asciiproc/setup2binaryproc
+/setup2asciiproc/setup1binarydecodeproc/setup1asciidecodeproc]d/jpegprocarray[
+/jpegasciiproc/jpegbinaryproc]d/Q{/im_save save d scol imageprocarray ~ get/s ~
+, d/polarity ~ d/smoothflag ~ d +/dx 2 ^ d/dy 1 ^ d +S/mystring ~ string d/bpc
+~ d/ih ~ d/iw ~ d fx rf}b/X{/im_save save d/mask? ~ d/maskcolor ~ d
+imageprocarray ~ get/s ~ , d/polarity ~ d/smoothflag ~ d +/dx 2 ^ d/dy 1 ^ d +S
+/mystring ~ string d/bpc ~ d/ih ~ d/iw ~ d}b/Z{im_save restore}b/beginjpeg{
+/jpeg_save save d jpegprocarray ~ get/jpegimageproc ~ , d + +S/bpc ~ d/ih ~ d
+/iw ~ d bpc 24 eq{/DeviceRGB}{/DeviceGray}? setcolorspace myimagedict @ `
+/ImageType 1 d/Width iw d/Height ih d/Decode bpc 24 eq{[0 1 0 1 0 1]}{[0 1]}? d
+/ImageMatrix[iw 0 0 ih 0 0]d/BitsPerComponent 8 d/DataSource jpegimageproc d E
+image}b/endjpeg{jpeg_save restore}b/Y{scol myimagedict @ ` mask?{/polarity
+maskcolor 0 get 0 eq{T}{F}? d}if/Width iw d/Height ih d/Decode polarity{[1 0]}{
+[0 1]}? d/ImageMatrix[iw 0 0 ih 0 0]d/DataSource s d/BitsPerComponent 1 d
+/Interpolate smoothflag d E imagemask}bd/doclutimage{/rgbclut ~ d bpc @ 8 eq{!
+255}{@ 4 eq{! 15}{2 eq{3}{1}?}?}?/hival ~ d[/Indexed currentcolorspace hival
+rgbclut]setcolorspace myimagedict @ ` mask?{/ImageType 4 d/MaskColor maskcolor
+d}if/Width iw d/Height ih d/Decode[0 hival]d/ImageMatrix[iw 0 0 ih 0 0]d
+/DataSource s d/BitsPerComponent bpc d/Interpolate smoothflag d E image}b
+/doCMYKclutimage{/CMYKclut ~ d bpc @ 8 eq{! 255}{4 eq{15}{3}?}?/hival ~ d[
+/Indexed/DeviceCMYK hival CMYKclut]setcolorspace myimagedict @ ` mask?{
+/ImageType 4 d/MaskColor maskcolor d}if/Width iw d/Height ih d/Decode[0 hival]d
+/ImageMatrix[iw 0 0 ih 0 0]d/DataSource s d/BitsPerComponent bpc d/Interpolate
+smoothflag d E image}b/doNimage{bpc 24 eq{currentcolorspace}{colspA}?
+setcolorspace myimagedict @ ` mask?{/ImageType 4 d/MaskColor maskcolor d}if
+/Width iw d/Height ih d/Decode bpc 24 eq{[0 1 0 1 0 1]}{[0 1]}? d/ImageMatrix
+[iw 0 0 ih 0 0]d/DataSource s d/BitsPerComponent bpc 24 eq{8}{bpc}? d
+/Interpolate smoothflag d E image}b/doCMYKimage{/DeviceCMYK setcolorspace
+myimagedict @ ` mask?{/ImageType 4 d/MaskColor maskcolor d}if/Width iw d/Height
+ih d/Decode[0 1 0 1 0 1 0 1]d/ImageMatrix[iw 0 0 ih 0 0]d/DataSource s d
+/BitsPerComponent 8 d/Interpolate smoothflag d E image}b
+%%EndResource
+end reinitialize
+/DeviceGray dup setcolorspace /colspABC exch def
+: 492 492 1667 833 rc : 200 100 8 200 1667 834 492 492 F F 3 [ 0 ] F 
+X
+doNimage
+#DKjpZaR$A["5O(Z3IM:ZEULEQNb2)q#16js8RZKao)5>s8N&us7u`9#-n!uqu6QoJc3[gs8W,u
+"98;iYQ1m,rW)osrW3&sJcEdj!WMurrrMhu!4)Y)!WN&trrE"Ks2k9@rr;uur;ZctqR-X4rr)`l
+rVukJrQ5!<q>^Htrr;riYlM.^s1J@4pTjq.rVZ]q!r`/rJc<dj"98>pqZ$Qrp9Ob)s8Dut!r`/u
+JcEai"TAB"p9F\(s8Dut!r`/uJcEai"TAB"p9F\(s8Dut!r`/uJcEai"TAB"p9F\(s8Dut!r`/u
+JcEai"TAB"p9F\(s8Dut!r`/uJcEai"TAB"p9F\(s8Dut!r`/uJcEai"TAB"p9F\(s8Dut!r`/u
+JcEai"TAB"p9Fb)rVZ]p!r`,sq>^Bl!WW0!s8DrsrrE&srrE&srrN-!r;H]pq#:0jq#19ns8N#t
+!ri6!rr;ior;Z`p!<<)urVuos!WW/ss8N#ps8Doss8N#qs8;iss8Moqs8N#t!<2rsr;Q`rp\k6o
+rr;us!<<#sr;Qous8M_t"gS"&r;HQnr;uuurr2p!rr;rsr;Z]urr)irrr2lprW)uqrW2ilrr*&s
+q>:!ds7u`gs8)lqrr)`nr;?Wps8;uts8DrsrVlcrs8W)trVc`prrN,ts82uts8;iqrW3&us8;rs
+s8Doqs8Dlp"TSK"r;HZprquisrVlcor;Q]q!<3#s!WN,urW)utrr2lprr2lqrr;rqrWN2trVulr
+rVulrrri<#rq<W'ZMaUtrVZWls8N#trr`9#rVZZnqYpNps8N#ts8N&ur;H]os8Duq!r)Ngs7ucl
+qt^6hr<3,ur;HZprW)osrW)umrr;osrr<!#rr)cns8N&r!WN&trr;rsrW)oprr;rsrr<!!rr;ur
+!<2rq!<<#srVcTl!<<#s!<;ur!WW/urVc`prVlfqrVlctrVZWnrr;ots8N#t"TAB"p9F_(r;Z]r
+s8;oq!<3#ss8E#urr)orrr)ors82rsrqufns8;urrVulrr;liprr)rrq>^Epp\Y!h"7Z-bq=OXd
+s8W')rVlirs8Dlorr)lrrVcco"TA>tqu$<i!WDrrr;ulorVlcrs8;lprVulqrVulpr<30"rVlir
+rW)ogrW)orrW)urrW)ulrW<&ts8Musrr;osrr;osrr<!$rVuljZ3@N2rVuios8;rsrr)lsrVliq
+!WW,uquZirr;ZZor;liprr)ors82rsr;$Bl$i0c!j0bt[\A-#]o)J[js8MuorW)omrW2uqs8Dio
+!<)op!WE#tr;-Ekr;lipqu-Tqs8Dusrr)lrs8;rqrVZ`orqultrr;otrr;oq!<<#s!<;rq!<)lq
+rr;oq!<<&ts8Duss8Drrs8N)us8Duss8;rss8N6#s8M_t"g\+)rr)cpr;cisrVc]qs8W)srVZZp
+rV?Hmr;uusr;Z^*q>Bj;+W`Nf$?Q.ArVliqr;uusrr2fqrVZWps7uWorVufqr;ccqqZ-QjrW2us
+s8Drrs8Dus!<)rs"TA8srr;lpqYgBlrqulss8Mrtr;HTnrquiss8;rts8E)us8N&up&4sis8E#u
+s8<'"rr)irrVZZprri<#rq<VtZ2a_(rr)cns8E0"rr;urr;QZnpAY*jrr)rurr2j'q>^E[nG&h4
+#CZ%>rVulnrVucsrVuirrW<-!s8;irrVuj*rVZWorVQHgr;QZorVulsrVc`pr;clrrW2uqs8Dfn
+rVcQks8<#us8Moos8N&r!WE&urVuotr<!#us8N#trVQQos8W&us8W)uquHcrrVuitrVliq!<3#u
+"TAB"p9Fb*rVZ]p!;u`ns8D]krVc`p!<<&trVZ`qs83?)r;6HmrV48\>"!3(q#C9nrr;rqs8)fp
+rVcfqrr)orqYpHl!<<)u$2sf!r;QZos8MusquH]prWN/tr;HZpr;ciorUp-is8Mrtrr;oq$2sl%
+r;HWmqu-QprVulsr;lrts8Voos8Dus!<)rqrr)`n!WE#tquH`rrri<#rq<VtZN'n'rW2utrr2oq
+!WN,trW)osqu$6jqYU<j!<)rss8;urqu6Nmr<rQ#r;Fqd<qoj0r;6Nmrr*3%rr)clr;HWprr)lr
+!r`,ss8N&u!ri/rs8Dus!WE#sr;uusrqcQnrr2itqu$HmrVulrrVQQorVlfqrVlfqrVc`pr;lor
+s82lrrqufq!r`/us8DZjrr)ls!<2rqqu6Wo!<3#r!<)rt"TAB"p9F\'s8;or!W;rrr@RaBs7ZHj
+qtBgTjMQ^jB4Ye8`Uid"qUq'E6U<tAMp;(rnbi:2&n^Y06sT][q>LQnoDSLaq#:0krVuisr;ZTu
+q"FR_r;6<es8E#rrr2op&,H/#r;6<epAOIQq>0mXq>^EjrWrH#o)/IWrq6*ep]13kr<)uprr)ll
+"TJ>orV6Ek"ShZerVlfl"T&&pqXOR`!<3#us8EW-r;H0_p\+LWr:U$Np$hnVr;QZprW2uss8N6#
+s8M_t!4)Y's8E9$s8DiirquNjr@%O1qsLOl7r<g9NdGG<9=<Pm'.H4gJTG3G*_4?Kq8XIhg\gTD
+[.s[urr2itm.9ZFoE4dUo^i%R!ql9Srq.0,q=X^]qtg-cr;HKiq>L6gr:g0[o'bu>o`+^crW)oq
+rY,8-rVQEhrq6-eqtTdTn`o;shWFk/"S)<^me6\Z$i'JmpA"U_kjS*;qu6QkrW2uqs8!-!kOe03
+oDJUZpA4[drr;rprri<#rq<W!Z2FS#rW2rss8<)rrqZKjs7n#4d;Vj@g%4Y.qtTC!Q9RGhW8.:G
+o_e[R\kWW`a;e+=rVZHgrVH?h#5deTHZOFZs*ko5I!U0gItE<B^Y.oHrVH'\rVZNer;QWmr;Z`q
+q?$HYKDp)uQ0S5DrVulrrVuj>qYC'arV#p`q"O*pQ[EIA92AGc>]HOblM1>IqY^6equ?Tufn"Kr
+NV<AMs8EQ-rr)cgrV$'JO*H/#NU?B<r;lfnqu6Tp"TAB"p9F\'s8;or!WE#sr;lfns8=>Cps_rD
+f(Sq7o(;YTr:Q'q<*AJ\qXFL]o)&C`T,A&FoDJ:OrV?<ip\OjkqW;HVs%<Da6:LiDs%35_s$Huh
+H*QT1q"k$g'E.k(rr)]mo)8F_oW^kV5"7`Jq#C<mrr2lrrX8T%qu$Edr:B*E@8$Vd"%G^G7/o^_
+6pF%5HFrJ>r:p<i#k@Q`a%/H^Ab?!#s8N&ss8E/qq"s]es$[,]6qb,aq#(0j"9/?"s8N#trri<#
+rq<VtZ2ab%rXf#,rV?EdrU]dYf1L8Bp[%VRr=Jf)o_>0sQKN!gjnJ6@o_e[fr!!&6,]rbQs8E-!
+qu-BerX/JfCIh5e='Jg,<W?)E<)QLd6r?`E6ZU':q=X@XrqHEfp\jd]q>B&[5ZL`Y6"oERrr+AF
+rr)irq>C-aq>0c`>t.4U8m-J#OdhksD-0M$5tm<uq=41Tr;-?>9`IffDt<o+s8N&s&cDG#p%[<Y
+5taX>6"8sLqu6QnrW)uurr2p#rVuljZ2h31r;Z`sr;Q`o0)b_Ho_IZm?JtS@qYTgZp&"IA.r+bN
+iDPF&pA"CRrV6?cr2U@0rVuWhqYpBgqYgcsl>B<h:p8a9rT,<biSWG(M,-cC4^,#\rUp!ap\t*h
+qu6Bfpo?VW9:JOP8tYbRrVdH.rr)cip[J%?QqL4>9n0b9p%\R_'(tk^d?7'p8O\*dqXaFVq"i<+
+s$m*&nc&Les8N!3nGE.RX?90URS?UCU@e6Zr;QZos8W)trri<#rq<VtZ2a_(rr)cos8;rps8<?'
+orLa0pA4LYp\k*kr>Y-B)tEmpo"@Z;o^MYQr;QQkq>4AXo)A@^r;6Knqu-]nl>0/o6it3sp&Fmi
+q=t!a&,,\dp!IqH6r?Uoq>U*cq>U@(qYp6ed:Yj=BB3qt79/(;rVliq%/g)'r;#uT7Qs7PWoj?V
+"S_igp%SL]#kmH):/=JKQ1=nJ#l",ibXk;tD"7N'r;I6&rqk>h5"fhOC/.B)f_YUHrVc`prri<#
+rq<VtZN'k&rW)lqrZ(e5mec6rDts)+q"Oaarql]O)6*Q$rUfViJ+id>r;QX#q>U6D't!r:qYpHo
+rVHKpqW__n:]j2'q"4U^!W)`nq[iW$nG)$t7S66]h#7$Hr:p-gr=SSpp7=9D6F63h7ncI/o_e[e
+rr!E+qt0j]^Ih"";m5`eo_/1Ts8)cp(&S"/o"%"]6TW![p&"[\b>(])B(GotrX\YsqXUFI:-lDY
+[R<GSM"1HBrVlfr"TAB"p9F\(s8Dus!<)or!WDrrq#oVK](l7%rY,>.rf\burV?Ben>fURrV-6e
+r;$Bk#5n*l@/9]orr)oprVm9)s8Ml^CJ7>l_tX*/rVuits8Muq%/BPSAjoNcSGDpUr;HZn"SMZe
+gfOMH*an('l=iX^9$@#,s7H9drqc?em:9!d7&0/Hq>C-hs8;utrVud/rVl]^P$W$f`V06+r:nN/
+:.T6lqY_*'rVGAQ7Sd+Pp$l`a:J/_(nbr"Xr;lThrr3-"s8M_t!3uS%s8E#rrr*3!qu6E':YkmH
+s8W&s"o\@0:At(irWN,nbYlU`r<<2qr;6Hls82qT2!P&="T85tqZ$Nn$NL,%m;#Bf8]1<#s8Dus
+s8<H,rVZKhrV)mW9gs9oq=ajf!<)rs.J3:p8l@sWo_S9l6<66ulM12Rq>Bm_q"Mp-8Oc_4rVlZm
+r;HNls8Dlqr>#>1r9!,2o_84Tq>9s58kqoonbi@brr!]5q!Ia<7SH4UpAXj!77Tdbl2C;SrV$0g
+rr3-"s8M_t!3uS%"98Aurr;p%q"t$cRTT.Xrr)lrs8<-$qD`Hlq#C=!r;,MPXS_toqZ$L&qu-<g
+],BK(rqZKlr;HWprs\o(mV>Kg8]1?%rr)ipr?VC@q#:3iePo15:YYg<rVl`gqYAoF84I%Qqt9jV
+DG*Je]D2+!r=8T"qXg.C83q@irV-6hr;?Nos8Dp"p\O^\p]'jmp%eL]cUgl&D=d]*r;ccqrr;p2
+p")r387h#_qtB8o6<d'jp[\7\p&G$jrri<#rq<W!Z2FS#rW2rrs8<T0rV$,P@IO*lr;HWnr;HQh
+/:7Eos8<W-o^#YSq=a^br;HKjpA)iSg\LaHr;lrsrVlis$3'hiCJ7>l_YF'.rr2lrr\FHMrqZHW
+?;+0[ankc.rqZH`o86(/6bE-eoD/0q6WQTpk54iNqu-HhoQWl%7%!ZEp&G!kqYgBnrVZX#qYg3_
+r;QNbq>^<scq7&(D=d](s82lrs8<c.o8c:?6+QacmJZ^m5taRXi;<6Hr;QTmrri<#rq<W!ZMj_$
+rWE,urVZ]o"nhe[@I!Xer;lors82im">b<!qu$Kj(A?upW;$#]rVZZlrUos&,2;nkrr)iprVlis
+$NBqjCJ7>l_Y=!-r;AJOs82`jqt0Gq9Mn3gq"j^_qtBj4:/XDrkkF]Fq"F3#85)CLp%81Yqu$3Z
+BM;>rYk7hhs8E#ms8)cp!<<)u!<<&t!;ulo%K-2&q"ajbd7R/)D=[W'r>GP4q9)c37:kcYq"4OZ
+mX.?!4e_ZJq>L<hrr3-"s8M_t!3uS%s8EZ/s8Dllr;6Dg=lfAVrr)ioqu$Kk"AEJ,qYgHk"T$nR
+](l='s8)fqs836!r1tLmrVulqrr)fps8NE)qsJ5n8kHnorVlfqrVuj+q>C!cqX\`#:.hqfqY'sg
+#kdn>5t"8UnFutZ(]4%$`'d*f?.\lCrq69amUo-f9=+<hqu?Ttr;HQlrr2lqrW`>rr;QZlr;ZTm
+r!(P@:.T6krVc]urVZ;36N9LX](>UjqZ$9toup6%6Wr%<r:g3frr3-"s8M_t!3uS%s8E#rs8E?&
+rVZQjbu)X\r;ZcrquQcqs8*1S4S8RNqu$6#<SdKNrVud&rVlZkph*(crVulsquHWmrr<!)rql,!
+9M.moq#(*i!<)rq%/]o!qu-N[AP,]h_Y=*-$3'o$a\#B&G22Nbn,Mnnk2_4c=$`)=pAXmbq!`E!
+9M2)QrqlNir<<3!r;6Ejrr)rrqYpC"q"":Yq9MZ.88[krr;liqs8<5ub<np&Fl)EPs6^?_o'YOb
+8Pq[3mJQVUqu6TurVuljZ3%?1r;Z`rr;Za&rVl`fr9mFRqYgHns8<Q0rVHDt&(^^Sr:oiD=nVUa
+r;Z^)qYpBjlmmYbqtC!cq>L<lrr3<(qsJ5n8k?kor;Q]qr;ccpq[<9"qYB&I8l8('q=t!g,kgbL
+78uleGBJ7TGBe.MH=KWF6qY\uoDSL]p4lL>8<39?s82ip!;ulr!<)op!WE#sr<;rgqYgEks7uup
+bt:`%D=IN(r;Z^"q=8l#:/+pkG7Sh4HYn(SB1G`d:X/_1rqucq"TAB"p9Fb)rVZ]p!;ulq#lOYu
+q>B]V6K\=C,5h?1r;6EepGc[Wqu$-C9W7^Xrpp$arVZEbV@2PYs8Murqu7''s8Mo[CIh)ianGT2
+rVcZor>5A%q"=Bl8P2i[j7rNGp%Z9l:J=,B5>(`<)FR(m5'Z\cr;$-[[m3\[B^Pfqrp]^^q"t$h
+s8*3&r;$?\]u]O1p\"F`p]f#69h]Eqr;ZHurV?-$78ZlI5Y"72q*PEX:JQ3*q>U6hs8N)ts8N,n
+Z2h00r;Z`rr;QZqq>^Enq'4$fM=1<-qtfjXq>:*%%D;Z/o5S0pqYpNoq"js^r9GGSoDJXf"8r,s
+rVZX$s8Ml`E(NYl`V9E0)Z9R5rVZQhnGMYOm=[Z&6':[2r;60PH9Otbs*t,tGPQ[lJl+p29=FWq
+r=S_uia5/T8]^W#p\t-crVHHjrr*9'qt\,p93cK)rVZ]l%+%L=95O.rqu6NdjE(>l"\EooFa\T3
+I0`_?84p_lp&+dgrrE#trrMi!!jV_%s8FPHrr)`fs8MKbn?G!Vp&"+PrV6Bcq"A8=ch<Gm\+oXk
+p\Fado)/#Q0B2s0rr;okrWDu]D,(%,"3C95qu?QqrVlcpqZH?RoXOoh&ku!Bq>L3hpUEO^8U'+\
+oC;JGs7ZKb.JEDqO?lo8DWplknbVpD6VU!chtQ^6r:p!`pA"R_r;#gJE^!JeIJ*=6q\/nU7nlWm
+m.L5Rp%PmZ:-3gYo^i+Vs7?fmo'u;BmZ0e04*'?Wr;HZq!<)rt!VWf!ZN'h,rVl`prV-0grXAVt
+q=K\IR.U1Fq=jacp]gZa8O&;*WW2\loa1Tmqu6NW8g)+Nrr)ors8E#uq>LTol>B<h:;[&*!;c`k
+!r2Wfs8!W/q"):-78l1-n+HYQq;uE];F%hbq"FR^qu?Tnq^DC=cW!248u;1UrU]j;CI1usR+qB5
+p%&%Vp%\@Xrqc2L6![&\d/*J9q\B%V85;iqm.U2GpZZE]:,oZYq#:$_s82imrqd#re65L@6*U(W
+r;ZcsrVulup9Fb*r;HZp/,]GGr;HNkrquKeon5n_cLU])qY0UWo>3:IC?53\r:^*dq>6gA2UVKo
+rVufprr<#rrr<!*qWi&l6rLbkqtg3ir;ccqq\],"gSe%@:.0?dr:^$_nuY2Z6uhVjrVZZprVucr
+rVliq+85Au5#k'[hY6pArV*m.4[_epd.7&2rVlTcrVH',QiBYu4%-.@p%/(Wps2K+9lBS$qYBlf
+4\nXnlMg5Np\Y!is8Duss8<5nPsSP>B%d%Ys8N)ts8N,nZ3%?0rVuisr;HTrr:p3ir?M(4otk65
+F/@FAkLc\P:3D@83,bnXjl+.10,n`]p\Xpgr;HZp!r_uns8W)ts8NB$l>THi;jkD4s2,ko^U^MD
+T6Xm>6:sgoiVEBKoD.0P8524[pA4U^qZ$Noq>pNms8;om0&0u';b!)HoDA=ZoX\4%5!Vtr\(p<:
+o^h(\P$9k@78K`Fq"jpcq=r9+9h]Ens836$k$:AH7DS]rqtU3f!WN-!rr<!*rVlWJ=@#tNOnSYO
+rrE#trrMi!'s[`8s8MrqrVZZmp\=adrr)TfmBgp6;?']2:fMM?o(hEq3untX,8_PKb4tr5s7cWp
+rr<!$rqlQjrql^.qX/8r912QN77Kd=8kDK>5t4HG71`_!kkY#Frq?)Z6;9aflLt/Urr;p!rqu`o
+rr!Z2p@"bD;+=71qu$*SqY8'@9126I77UheCa`^m:ddWI4'o\qqY'j[rVQH<77p*bm/-VLV*.RB
+Ds$igrq63br;HWorVuj&qtR!Q;F+C,p](6nrVulup9Fn.rVZ]pr;Q`p/cPVFrqc0ar:p*bq=3Cd
+?@U2]p%nFYr;,mAa1&\;oDJR_q#:0crr)irrqu`mrW)uurWE)c@6ac_#sppJ779I.6qC&P;$^]R
+XQ9-Qq>C-ip]92Ks$?cU_>+'.!WD`lrqZL8o_IHP6qKUbq=ssflgt#E_2(r\8OZ!784#^95Y>ps
+lMpZ!qt'IWrVQN@6qBaWo`"^G<('#B`r#c-rqZ9aq>:NjpukpI;)i^ms8N)ts8N,nZ3%</rVult
+rVlforrN-!rqlfrqu?L!oOs*Np&+daqu6Qmrqlirrr;usrVZcrs8;j+q"a^ap\apW^pgVKY,ST(
+WXGl1[D']+kO/'=qYU<l!<<)u%/8JdXgGb.qt'^`p\t3mr;I'%r;HN]caBgV]'01m!;c]o')D=p
+jNFNbKR8#oLn)05mJ-SWrr2rr&cDV)iOu:q]_;=#gpO>e^&.g/rVlfprVZX#q>Bg9\Z)[:qu?Zr
+rVulup9F\(s8Dut!r`/uq>^Ko!;ulq#l=;kBo2TXo_SUc!<)rsqYg<js8Dfnrqulsqu?Wtr;$-c
+s8<3"q>:$`p\=UbqZ6Bds8E-!r;HWpr!EB$qt9^]rVZWns8;uqq#:<mrr;otpA4gf"T%rhq=O^c
+!W)`nrW)`nrW`?!qt^!Yp&FXdp%J4Zr;H]rs8<6$rVZNdpA=dds8E0"p&"RarVc]os8Dusrquls
+qu?Tup\":Xr;HZq!<)rt!VWf!ZN'n'rrW0!rqZQoq#:3krW`8lBnuK_q#C0jq>^Emrr)cqr;Z`g
+rW2cis83H-q#'mYrV??hr;QTlr;6?fs7lZhs8N&srqlcps8Mup"9&/rp]($lpAP!err2rtrr;p!
+rquWis8N#r!rVfgs8Duss8;rqs7cTis82okq#C6kquQZirr)iq!<<)u!rVrnrqulpr;ZWmrVucq
+s8Doss8Dror<WE$qtg6hrqcTnrrE#trrMi!!4)Y's8N0!s8Mio&GuG(q""7Wm:D"Eq=aLUr;HNl
+s8;rqqu-Bj!<<)u"8r#jrVuj(rV,mWqu$E\q>1$hrVl`prW)lrrVuitrVHQls7l`oqXsmd!r;Th
+s8E#rs8N&us8E&trr;m%qt^$]q"ad]q>^Bnr;ZWnrWE3"r;HNj!;lcl!WN&rrr<#urW)utrWiAu
+qY^<gp\b'grVcfss8N#rrqufp!WN#rrVucsqtg9krrE#trrMi!!4)Y's8N0!s8Mios839%rquHW
+lt;4Amem%`p](3irqcQnrr2lnrWN)lr;H?hp^$Qkqu6Nhq"=Xdr<`K%r;HNjrr)cnrr)rsp\t-j
+rr;p!qu$Hks7Q<h"onT#rqZKlrW2uqrr)ors8Muq!;lfo!<)rs!W;ckrW)lrqZ$NprVulsrrE&u
+rVlcus8Muos8N&r!rr8rs8E#srr)ors8E#srqufp"9//qs8W)srVultrVulup9F\(s8Dut!r`/u
+q>V!%p[S+ITkJFH9RCBOnGDtXrW)utrr)fgrXer)r;$?ar:^!^qu-Hbp\k!fq?6]nrqu`prW<&t
+rVulsr;uimrVucprW2ifs82lorVliss8N&ss8E-!r;-3drVlfqr;QWsr;6Hjs82im!W2]grr2is
+q=ss^"T&)pq>UEj!popbrr2oq!WW/srVld#r;HNep@nLbrrE#trrMi!!4)Y's8N0!s8Mlps8EE)
+r;QGuIXkp1NIASAr;lcnrr)otr;Q`ps8N&s!WW/us8Dp,q=sX]rnHr7rqcBIk5OfIquH]prW)os
+quH`or<*&tr;HWo!WE#tpB1<Uh=pmIs8W,u"9&,nrVZWpqu?Tpqu?Wqq#:6mrVl]rrVlcqqZ6Wo
+rr;]krVZfmq>C9l!;6Bks8Duss8;rqrr)lr!<;urrr)iq!<)rt!<)rt!VWf!ZN'n'rrW0!rqcWp
+rr;iqq>^3op\+/jN:HT@qZ63Ys8Dus!<;lo!<)rqr;H]rs8ET*qu6Qn^G@(]q>@cK1unT5s8<#r
+r;6NjrVZ`orqurur;-BlrX/T!qY^$bdl&SurV-<jr<)uprr)lr!VuZnrW)lrrr;p!r;HQmrr)lr
+!W;cnrr2lqrW2ops8E)tqYC0fs8<0!ld4hmrr)fprr)lps8Duss8<2uqYgEjp\=^errE#trrMi!
+!4)Y's8N0!s8Mlp&cMS#rq#s`p\8-Jp@S7Up\k!hr<E,trV$6bq>U?rrV?Eip](0pq#($fqu?R&
+o_l`G*7Ol^\e5tFqu?Tpqu?TqqY1$d#Q=,frV6Bjqu?Tprr;clrWi5rfc23Wr;HQm!rr5ss8Doq
+!<)ro%fZA%qt^6_q"sper:p6err!*$oD\C]rVZQmrW2]crr"#;qY^<fr;+Q%;t]qbr;QNhq>U6h
+p\apbp](0gr:p$_rr;iqr;ZcsrVulup9F\(s8Dut!r`/uqYpWqr9XF]!:Tsd$+IM=r:U$cr;6<i
+rr;ftqu-EkqZ$:-p%nUbr:p$VrVlThq#1!bf-_N^rV+HODs%)t!<3#s!;QTg!rhuls8<5tq#:0i
+qYg?err*6"rVl]J-m$M-rVZWps8MorrVlcsrU9db!;ZZk"8Mcbrr2j.o(i7Yr;HQlqtTpbp[n.X
+rUTses7ucprr;rsrWN(T*`_q6r;cTlrX\r$rV5aXpAX^_pA4[Wqu$Ke!rMcks8N)ts8N,nZ2h31
+rVum!rVulnrrE&ur=&Vmr:g-]r:Tj_rqu9br;lWhs82lqs7l`oqYU<k-3!f7rqc?eq>C-gp&4aZ
+e/BISr;QWjp\t$gqu#p\qu-9gq=jU^rXo,"rVlclrVZ3]o_n^@-lU;+s8Dus!<)rtrr)lrrV[6*
+q=ssfqt^9iq=s^]r:p<j$3'err;QHarVlEgrX\Z!oD\^drqc0_roj6:'NP2,#Q=T!pA"O`p&Fss
+r:0^]rq?*br;-Hks8)fos8N)ts8N,nZ2h31rVum!rVulmruq(7lhgVPkM>+prp9RNioB8"rV-3e
+p\XscmH<Nhmem%_s7m]6q>L-Wg>hPrg_:dPq#(!WmJchNrV??^mbd'ep\t-kp(RE&puU>cht$[B
+pA+[@+WSZ%rr)lr!<)rtrVl`n)>X7/n_i<_lh^SVq>L$dr9r\(jmDd>rVZ<fr=SSnqtfR8jQu^@
+rq#pWM\f[cs7[?-q#1-bi83PYp\jm`rVHN`m/-;/jSA`RrrE#trrMi!!4)Y's8N0!s8Mlp'E.cA
+7Fe_C'-SfFi;'ZV,TSU]hZ!I?oD@a48KJNo@^Yq/qYTm_lCL'[*]f4o2'(0EqScE<k5FrMq8%/)
++!WXgdJNb/rTC"[/gDPd8!)p4p\E_j+3FH\r;cisr;clprr2j'q#'TY<[o498Y"oBr<i5koW;FM
+(`u/*li6f6q>I?`QK3`Y)'CS_iViT(:b*J57oALDrq<m5.39]rK%^)$q>J6$IEPY;/8"_XrrE#t
+rrMi!!4)Y's8N0!s8Mlp%fPf^,&e\P0d@DKFeTfps!pVS*dR2Pp\`]H',ESu2%gR_p&Fj_kA2(O
+0g?]t9e%.6rVO,:*pNY$q5G_W)*g&%%8tCIqsJbK'K&!6/.j+Inbr+>+WAN$s8;rss8;rtqYpNn
+8GhP"'bN8`3>!!Bl2:GMLE.$^7lM"m<T*iGq3`F!>n\J?/J8_@nbg0N,p*pN,1lbfT.CR*4ZX5o
+8C781oXGW*@20go8,<2b!<)rt!VWf!ZN'n'rrW0!rqcXtr9Zuk*D*m5iHZ@a*_+KGcuB^>a8Gc$
+@158hkkaD"*#GRLpA'ja*LYp_eSZ6?/'Rb`^`bB!q>SVg&5^jCn@_4!@e'>o*ug[2p[QXX%2ZeW
+ptQu/bP_D=!<3#s!<;urrr!'!q3Dp7Mr+L%24u*1UA4P^'cDSRqWt+R&8LY2pS&lN)3Wb@c\2lI
+]_)0aJK.VNl0nMR.1L:CoD69u&QS)qqZsVX+WP6lOKSK\rrE#trrMi!!4)Y's8N0!s8Mlp4oFtF
+)(jJ<o_dGr)_L(Inb^un)5Zp#[h^0dq>9UXm<0+8mJ,s#*-V,Sm/6'C(a@?+r3mUliVrG"'LgmY
+r;ZO/XW.l&nnS_Cp@n4VpY.JBT)&95,9P)*rr)fqrW3&urVcco+Q?3-H1(S)qY5(<:&3j1+*6iI
+nGN*b,9Onuo;39HK(]0@,Pok[(4Z5Sr-o_^o_JIK>7bQ3qtK[Ybps^5qY7QC)I2t2p](0krrE#t
+rrMi!!4)Y's8N0!s8Mlp-2dI5'6s9Hrqc"P'7ooUq>BP9'p&4eEu\6Tq#13gqplr0b58XI)Z\=c
+q@WW#XV2l+qu"#A.Hp]s2]I\Irr!H'nV*n#q:;guqt0d\qWU'^NrStZgE@]\r;?QorrE&urVld?
+rVXPO+4g8dqY^-4LoU0Y'dD<*pAOpdn4t!Lqt-d%,h`"nr=]&#@i9ajq>,g^;Y^(^di]RBq>^='
+q"sf)(gd(9\Jc<tpAY$drr<!$rVuljZ2h31rVum!rVulnrri8m;&Ff_q\&l)o1BdNqu6HjoKs^b
+qX@B"BE,=>[BBP?,c<".UABH`2X^J=rV6?L/KN79r43[nkks6e*O>P?q#'^^rVZ]p'CbqsoBY5J
+QuaMnNr/b/+X"o)rVlcsrVuoss8Drr$iU!c(H(:MrV6<arVud7q2Q+@W3jFIXh1cO+'8=7T,oNC
+r;HZnp1"ths8!0"LDj1hrVWQ5,+PsMs03!<Y]([Il1VS)+j0]]s8;lr"TAB"p9F\(s8Dut!r`/u
+qYqH2oMHTaqu$EjohHBZqu6Nlo10p`o&h\F(]P@2+VGY)(`X*9q0s;Knbi%YrVl%,+49ua\eZaY
+qo0Qqbkh;2q#9p\q>Ks_h2>5k)As57*ZU1>qutgu+NjW\s8N&squ-j#rr)\L*C0/pr>P5'q#'p_
+p4F&&)&<o(+W)+8%Q`kOTGoNLqu?U;r:XV<If'!9KGdY\qX^*m(_[]$*Z,V3%hg2QqmRFmgA_!N
+rVlis"TAB"p9F\(s8Dut!r`/uqYpctnk^Bequ$Km2"scaLAUuIrU32lMt?6b,Yi]1F*)nTFEMr4
+pQ$Fcn,2kXq#0P'+49ua\ecgYqoKs/bPD2:"8hcjrVuj6rPUc0,:,EaLS@!PN;NP-+X"r*rr;ur
+r;?Qos!.OAqMH4UmJ?bTqt0dbr;(aX0mJ1lFE_tZH$>86qkb&]m/6k]$27sJIJNg;L)sFrq$H_Y
+'IRO=F*)SUs)\3g#O(up(+ePFqu?Qorr<!$rVuljZ2h31rVum!rVulnruV+0:)f8kqYpEd:)Sc_
+rVHK_8fEigofjRZpA"@Yp](+2o_S@ZL_r,>p%eRSqroaOdJWsS(+AACg*.TCqsXR_&c;=]fD4r/
+'fDuDq=sdX0,fcKq?5Or+NjT]rW)uurV?EurVMHd4QZ;4qZ$I!qqTm$MB"qUq>^@#q"ad\p@%tU
+U_u&Trr!3'pgk=jp\t)C)cm"5(&XL=0(/Q4q>:$ZqXOFXqn!RjjS\uVq>gNprri<#rq<VtZN'n'
+rrW0!rqcX5r:<W#OSS\Mr:E]#K_t`DrUWZ%P5=i`&6&,ur<i#llBmUdqm@%`f`1j]q>U<#+r\l,
+rjijokPXU!&!$\ds7dH0n5UL*bS;2#p\OjXqV!G;Mtm/&+X"r)s8E#urr)ots8E#ss8N&s'`5<T
+,L-)\p&4d'/MlOt'dM$%oDS^e$N$H`_#=/&*Am$Ys8<?)q.:Llq>U;D)ccY4r"mQp)RfP4nbVtV
+Z')]jr4<[hiV`ZNq>UEo"TAB"p9F\(s8Dut!r`/uqYr&Co1U!bqYU6ho1^'Uqu6HjnjjXWr:d-5
+,cgS8p&4HE&0&[em6h_6nb`@a&E@7:+k$8d\ecgYr:tUQ<n[KM)#D&i)90Q3-HZ2Rp\slD*>j\/
+q:Zu7anu#8!rr8ur;Hs"qrL-SII6q3r#,6l%Qa(=2&0m%r:B^[a<_=Xo(o'u1$SW8s8=5<Af5sl
+rqqWt;""5Yn3n3slhgJRp"_J>B(,Z-(an;<rVHHks8N6#s8M_t!4)Y's8N0!s8Mlp"T7mc(mb4"
+'`S"&:)Sf`rqu`f8K!?^qrUHc/#WF>/F]M\)J8m?oUmBCPNM]$OVJfYdes'T(FeSHr5:&qESg-U
+d6SaSp=po3B'0-i%HO,u()Ml&q:d&8b5;5<r;lotrVe,As8MupqM?=5U?MF<WZW4Oq##^^)h@5I
+pWu,B1t_a"WYRGWr;QX?pgtCjqYU)C&hC]Cp%,@''kZImo[[=]*l@jN[2UXVq>L0frr<!$rVulj
+Z2h31rVum!rVulns'#?n8/%9`qXa[[9+?aOrq-0Y8JI0Wr:/?"',Ec458Y#-f_tI@m"Gud3E[jO
+=rSR2q#%`>.dR!2n>7oM,u@Gb%8>(Fl@U#n2K*@U(L:,\AbGoN*ZE,ss8Ms"rr;utrr;otrr)io
+$KZCG'L#JX'+SpHs8>"ED\X$D<_OYO.D,'JoV`NWlhUMSrUXP0Jbf0;]."@9+N"'LM'EKZ:fSqT
+.@0W)p::hci;EELqYpNp"TAB"p9F\(s8Dut!r`/uqYp`uk@d/Tq>^Bsq<2QWT)&Ec7Jc=V3MuKJ
+q#&or2B`qS5D@tlrUop_l`EVu'.e:>@l`?CqnGEgir/TMoX/Ea)AaZGf),4>h2O36()]Q>l+&EP
+i;ML363>I1s8MuprW)osrW)osr#"r$l'=gZ(a__Kk5G)CrUQU^*ul:LD8>rHr@@]K2c&T6rqcTY
+K0=haqYTfB66RVcm/?7Q>pC'u-tg0er;$</5=jT/rVQWos8N6#s8M_t!4)Y's8N0!s8Mlp"oeJd
+j7N?Nr%J'Jl/VU=q#(-imd'ZGqY^*dp#srQh<b"9p[nFTpAOILgsb0Pqs!YErVHEVjSf,N$h3ui
+ptjKMk4\`Pmf35#q<ln]hsC1:kj%:0q"s7:qu6Worr;usrr;rr$2sDirV>p>bLbtXr#GM1r:K[[
+nD2F>jS&KIq>1![kjJEIpAP!hmb[mAq&];/q<Zu.o_n[cr:/Rpe`$3!qsNqPr9<DCr;HKerr<!$
+rVuljZ2h31rVum!rVulnrrN,ms8;rss8)cp"8i)rrr;cqrr)WkrVufqr;cHgrr)d/q"OI\r:^-g
+q>U<jp%n7Xr;H3\s8E)sqY^Bf!W)cpr!<2tp%/.Yp$q_Tr<3#sq!S"Yqucosr;6Nm!;?Hl!<)lq
+!r`,uqu-]op\FI]r;cQkr;lcfs7uchq#C<mrW)lqr;uWhp](*jq>^Btp&=jfqt^6kr=J]%q"+:Y
+qu6?hq="+Wr:T^^r<E,nrVl`grr;m!q#($frr<!$rVuljZ2h31rVum!rVulnrrE&tqZ-KmrW2lh
+s8<B'q>:0inc&=Rqu-<^s8<,rpAb-epAb!lrq5p_rqliss7lWns8<#mp\k-k#Q=Aer:^*hrr)`s
+p\b!crV?WirVQ?hr!E>rq>L!bp%J.Ys8E#srVcfqr;I3+rVlNhrquNcqu-6frV$6h"8r/mpAb'n
+q>1'hs82io(&.\+q"jserVlcnq>U?lrVZHfp&=piquQcos8;upq>L6kq?Qihr;-Bfqu6Wq"TAB"
+p9F\(s8Dut!r`/uqYpZsqu$EmrW2oqs8DrprqulspAOsqr;-?arVZNis8E#lqYg]sq>UElp\"Ob
+"T&#lr;HZp#6"GlqYU9js8E)tq"asg"T/,orV$9fs7ls"qu-3_qu6K_s8N&srr)rsrr)itrr)iq
+!W)irrW<&qqZ$QpquH]qrW)corXJc"r;63erVQ?frr)Wks8<&srVQBirW;rlrr;itrVlcprr)lp
+rqulqrVu`rr:p$drWW8or;HQms8N6#s8M_t!4)Y's8N0!s8Mcm!<)rss8;oq!ri)ps8Dups8E&o
+r;Z]rr;HZn(]F@3qu6NmqYpHap\t-jqY^0grVQ?ar;Z]rqYC0j"98>qrr;j!qYg9irVHNm!r_up
+rq?d"r;-3fq>0g\r;HZps8;uts7cL%qu6NmqtBsbs7l<dqtU3i!Vu]orr;rsr!)roq=sg^qu6Nt
+rqu`lq>C9l!r`&os8;rmrr*6%qu6Kgp\k*gp](0oo`"X]s8;rss82lrs8N6#s8M_t!4)Y's8N0!
+s8Mios8;or!r;cms7cTkrr!-"q>:*hrVZWks8<5trVHNlqYpBlqu$Wlqt^6kr$qI<rr)`gqY^<k
+q"k!bqXsgaq>C-gp\t*hr;HWmrVQTkqYU'crqQEipAb-lr;lotqu-Torr)ops8DusrVQ`rq>:0i
+s82utqt^$dqulunq>C6lr;liqs8;uqq>^EqrVZZpr<N?!pA4^cs8N&u$N9Yrrr)ipqu6Qes8E2t
+qu-Ejrr<!$rVuljZ2h31rVum!rVulgrr`9#rr;Nfq#C3iqu?Tn!<<)urr;lp!<;fm!WW0!r;lot
+rr)ots8N&us8Muss8N&u!<3#uq#:<nq#19nrVlisq#:6l!<3#ur;QQmrVlisrr2lrrr)rurr2p#
+rVuljZ2h31rVum!rVukJs2P'ArVuljZ2h31rVum!rVukJs2P'ArVuljZ2h31rVum!rVukJs2P'A
+rVuljZ2h31rVum!rVukJs2P'ArVuljZ2h31rVum!rVukJs2P'ArVuljZ2h31rVum!rVukJs2P'A
+rVuljZ2h31rVum!rVukJs2P'ArVuljZ2h31rVum!rVukJs2P'ArVuljZ2h31rVum!rVukJs2P'A
+rVuljZ2h31rVum!rVukJs2P'ArVuljZ2h31rVum!rVukJs2P'ArVuljZ2h31rVum!rVukJs2P'A
+rVuljZ2h31rVum!rVukJs2P'ArVuljZ2h31rVum!rVukJs2P'ArVuljZ2h31rVum!rVukJs2P'A
+rVuljZ37E/s7lD@s24j>rVZZjY5kp,rrN-!Jc<djs8N)urr3#nYlV</s8;lqJcEai"o\Auq")'%
+RErjiaN;EAJ]PsS!5ecX"NSX(c`$~> Z
+; ; 0 0 scol 10328 VM?
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_T42Hdr 5.0 0
+/asc42 0.0 d/sF42{/asc42 ~ d Ji}bind d/bS42{0 asc42 -M}bind d/eS42{0 asc42 neg
+-M}b/Is2015?{version cvi 2015 ge}bind d/AllocGlyphStorage{Is2015?{!}{{string}
+forall}?}bind d/Type42DictBegin{25 dict `/FontName ~ d/Encoding ~ d 4 array
+astore cvx/FontBBox ~ d/PaintType 0 d/FontType 42 d/FontMatrix[1 0 0 1 0 0]d
+/CharStrings 256 dict `/.notdef 0 d & E d/sfnts}bind d/Type42DictEnd{& @
+/FontName get ~ definefont ! E}bind d/RDS{string currentfile ~ readstring !}
+executeonly d/PrepFor2015{Is2015?{/GlyphDirectory 16 dict d sfnts 0 get @ 2 ^
+(glyx)putinterval 2 ^(locx)putinterval ! !}{! !}?}bind d/AddT42Char{Is2015?
+{findfont/GlyphDirectory get ` d E ! !}{findfont/sfnts get 4 ^ get 3 ^ 2 ^
+putinterval ! ! ! !}?}bind d/IDStrNull{1 add 2 mul @ string 0 1 3 ^ 1 sub{1 ^ ~
+0 put}for ~ !}bind d/IDStr{@ 1 add 2 mul string 0 1 3 ^{1 ^ ~ @ 2 mul ~ 3 copy
+256 idiv put ~ 1 add ~ 256 mod put}for ~ !}bind d/IDStr2{~ @ 1 add 2 mul string
+0 1 3 ^{1 ^ ~ @ 2 mul ~ 5 ^ add 3 copy 256 idiv put ~ 1 add ~ 256 mod put}for ~
+! ~ !}bind d/CIDT42Begin{25 dict `/CDevProc ~ d/CIDMap ~ d/CIDCount ~ d
+/CIDSystemInfo 3 dict @ ` 3 -1 $/Supplement ~ d 3 -1 $/Ordering ~ d 3 -1 $
+/Registry ~ d E d/CIDFontName ~ d/Encoding ~ d 4 array astore cvx/FontBBox ~ d
+/CharStrings 2 dict @ `/.notdef 0 d E d/GDBytes 2 d/CIDFontType 2 d/FontType 42
+d/PaintType 0 d/FontMatrix[1 0 0 1 0 0]d/Metrics2 16 dict d/sfnts}bind d
+/CIDT42End{CIDFontName & E/CIDFont defineresource !}bind d/T42CIDCP32K{/CIDFont
+findresource @ length dict copy @/FID undef `/CIDFontName ~ d/CIDMap ~ d
+/CIDCount ~ d/Metrics2 8 dict d CIDFontName & E/CIDFont defineresource !}bind d
+/T42CIDCPR{/CIDFont findresource @ length dict copy @/FID undef `/CIDFontName ~
+d &/CDevProc known{[/CDevProc , @ type/operatortype ne{/exec cvx}if/! cvx/! cvx
+/! cvx/! cvx 5/^ cvx 5/^ cvx 0.0 0.0]cvx}{{! ! ! ! ! 5 ^ 5 ^ 0.0 0.0}}? bind
+readonly/CDevProc ~ d CIDFontName & E/CIDFont defineresource !}bind d
+/T0AddT42Char{/CIDFont findresource/GlyphDirectory get ` d E ! !}bind d
+/T0AddT42Mtx2{/CIDFont findresource/Metrics2 get ` d E}bind d/UpdateCIDMap{
+/CIDFont findresource/CIDMap get 3 1 $ putinterval}d/AddXUID{version cvi 3011
+ge{/XUID ~ d}{!}?}bind d/hfDef42CID{/CIDFont findresource @ length dict copy @
+/FID undef `/CIDFontName 2 ^ d @ type @/booleantype ne{/arraytype eq{/CDevProc
+~ d}{matrix @ 4 4 -1 $ put/FontMatrix ~ d}?}{! !}? & E/CIDFont defineresource
+!}bind d/hfDefRT42CID{/CIDFont findresource @ length dict copy @/FID undef `
+/CIDFontName 1 ^ d &/CDevProc known{[/CDevProc , @ type/operatortype ne{/exec
+cvx}if/! cvx/! cvx/! cvx/! cvx 5/^ cvx 5/^ cvx 0.0 0.0]cvx}{{! ! ! ! ! 5 ^ 5 ^
+0.0 0.0}}? bind readonly/CDevProc ~ d & E/CIDFont defineresource !}bind d
+%%EndResource
+end reinitialize
+-0.078 -0.25 1.289 0.734
+ 256 array 0 1 255 {1 index exch /.notdef put} for  /TTE15B9400t00
+Type42DictBegin
+[<00010000000a000a000a000a6376742021bb088c000000ac000000ee6670
+676d34275c0a0000019c00000287676c79660544a1ef00000bd40000843c
+68656164c6ef633f0000042400000036686865610f9509540000045c0000
+0024686d7478994c502100000480000003c86c6f636150852fec00000848
+000001e66d617870023e032300000a30000000207072657051c0acbf0000
+0a50000001836764697200000000000000000000000005de000305550029
+03a6001b03a0001d0000ffdb0000ffdd0000ffecfe30fffc044e0137ff33
+001503a60014fed600000429000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000032009600cd00fa014801540163
+017200000000000000000032009600b400cd0104010e0154006400000000
+000000000000000000000000000000000000000000000000000000000000
+ffffffffffffffffffffffff000000000000000000004019181716151413
+1211100f0e0d0c0b0a090807060504030201002c8a03458a8a87b0012bb0
+472344b0477ae4182d2c2069b04061b0008b20b102c08a8cb8100062602b
+0c642364615c58b00361592d2c21210c6423648bb84000622d2c21b08051
+580c6423648bb82000621bb20040052b59b002602d2c21b0c051580c6423
+648bb81555621bb20080052b59b002602d2c0c6423648bb8400062602321
+2d2c00b0462370b101463e01b0462370b10246453ab10200080d2d2c4523
+20b12a04258a5058618b1b608c59692d2c20204518684420b001602045b0
+4676688a4560442d2c20b003254a64b1070526232b8a103a2d2c20b00325
+234a64b1070526232b8a10653a2d2c20b00325472347236120b107062623
+2b208a61b8ff8062b004262020108a3a204620b810006357604821212d2c
+20b003254723476120b1070626232b236120b08062618a2020108a3a2046
+20b8100063576048212d2c20b003254a6420b1070626232b208a61b8ff80
+62b004262020108a3a2f3a2d2c20b003254a642069b005268b208a61b8ff
+8062b004262020108a3a2f3a2d2c462346608a8a462320468a608a61b8ff
+8062232010238ab146468a70456020b0005058b00161b8ffc08b1bb0408c
+5968013a2d2c01b00643b00743650a2d2c4b525845441b2121592d2c4523
+204520b10405258a505826618a8b1b26608a8c59442d2c0110203c003c2d
+2c01b10b0a432343650a2d2c20b003254a64b1070526232bb004268b8a10
+3a2d2c20b00325234a64b1070526232bb004268b8a10653a2d2c20b00325
+4a6420b1070626232bb005268b208a61b8ff8062b004262020108a3a2f3a
+2d2c4b5358208a8a61208a208a60b004252020200f23b0016120b9ffe800
+008a5178592121212d000001000000010000edc925e95f0f3cf500080800
+00100000ab4ea86c00000000b2c271faff5efdfa0a5305e1000100090002
+0000000000000001000005e1fde100000a98ff5effe80a53000100000000
+0000000000000000000000f20400008000000000023700000237000001fe
+00770319004c035200000352005a05170066051f002c01c5003d02710071
+027100790271004c04e100a601c5004c0271005a01c5007302aa004c0352
+0054035200ee035200580352007d0352005e03520098035200560352008f
+0352005003520052023700580237004404cd00ac04e100a604cd00ac03c5
+00540581ffed05ae000e04f2008f04b80052058f008f03ea008f03e2008f
+0639005105e5008f0282008f03bf000e0599008f03c3008f075300520671
+008f068b005204cb008f068b00520504008f0492005203c5000e05c5008f
+05980000081c000005af0000051fffe7050d001b02710073023500000271
+00a40314001b04080000040000c504f6004b04f600700377004b04f6004b
+0494004b02c4001604ef004b04b300700228005b0228005b04f000700228
+00700703007004b3007004f3004b04f6007004f6004b034a0070039a0037
+02a3002a04bc0070049d0000074100000540000004de0000042b002903d7
+00e10102004203d701210458001404cd00290237000001fe007704cd00f8
+035200680555002804cd00070400013d02df0056040000670614004402e7
+002d043f00390400004404cd0082061400440400009a0319005404e100a6
+023700540237003d0400016904bc007004cdfff6026d00630400017d0237
+006002e4002c043f005205500048055000480550003d03c5005404e100cf
+04e100a604cdffef0098000002ba0000028d0000028d00000098000001aa
+000001aa0000017900000179000000980000022d000000980000005c0000
+018d00000271005a026600dd055003e3055000a00237004804350073038b
+003d02aa00390352002b03fc007301fe004801fe005003fc006403fc005a
+01fe003d03520039035200440352003503fc005a0435005001fe00560237
+005603fc005603c5003303fc006403fc006d03fc005603fc005e03fc0068
+035200390550003d0435005403c0004803c0003d03c0003e01c5003d0319
+004c033f0071033f003f04cd00820622000002c3006002c3004402c30044
+04930060049300440493004404cd009004cd009105550191074800630a98
+0044027d0039027d005205d300660636000103520039035200390352ff5e
+0352ff5e03c5003304350073043500730435007303fc006401fe0048038b
+003d0352004403fc006d0435003f0550003d0550003d0550003d0550003d
+038b003d02aa00390352002b03fc007301fe00000237000a03fc005a01fe
+000a035200390352004403520035043500500237002903fc005603fc006d
+03fc005e03fc0068035200390550003d0435005400000032003200320032
+005f008b0109019e0246031a0333037103ad04050434045104660485049c
+04dd0502054705b205fc064a06ab06d8074b07aa07e10815083508570875
+08d3099209e50a5c0aaa0af30b2b0b5a0bd40c0a0c210c530c910cad0cf5
+0d320d880dcf0e3d0e8c0f100f360f840fb50fec1054109010be10e010f7
+111811341149116711ce122e126f12ce1331137313f91448147914aa14ef
+1508159315e4164716a71707174417c117f41835185e18a818f719261967
+19c819db1a3d1a711afc1afc1b291b841bee1c561ca71cca1d581d8f1e12
+1e621e981eb31ec81f761f8b1fce2009206820ef210e2147218121a221bf
+21e2222b226222bf233a23d8242f246b24b0250e254525c2260926652685
+26bd270b27232751276e27be27db27ef28042819282d284b2869289e292c
+295c29a429cd29fe2a1f2a5d2a8e2aeb2b0a2b2d2b5a2b8c2bc22c0f2c43
+2c672ca92cf32d372d852dc62e1b2e632e852efc2f342f712fab2fe32ffc
+3028304d30713086309b30b230c830de310231253147317531ba31de3233
+32e733053324338133d1341b345a34a034fa354335df3690373537a237d8
+3815385138af394739d43a623b063bab3bef3c4d3c8a3cce3d043d5c3ddb
+3e103e473e8b3ed23f313f6b3fc3403b40ae410e414441d3421e00000001
+000000f20059000700000000000200100040009600000098ffff00060001
+402d2408220820081e081c081a08180816081408120810080e080c080a08
+08080608040802080008004646000000004bb0c063004b6220b0f65323b8
+010a515ab005234201b0124b004b544200b9000107c0858d161610703eb1
+060645b00860442b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b1801b148
+484569b0408b44b149494569b0408b44b14a4a4569b0408b44b14b4b4569
+b0408b44b14c4c4569b0408b44b14d4d4569b0408b44b14e4e4569b0408b
+44b14f4f4569b0408b44b150504569b0408b44b151514569b0408b44b152
+524569b0408b44b153534569b0408b4400b154544569b0408b44b1555545
+69b0408b44b156564569b0408b44b157574569b0408b44b158584569b040
+8b44b159594569b0408b44b15a5a4569b0408b44b15b5b4569b0408b44b1
+5c5c4569b0408b44b15d5d4569b0408b44b15e5e4569b0408b44b15f5f45
+69b0408b4400b0024568b0734568b0408b60b020232121b0064568b07445
+68b0408b60b022232121b0004568b0764568b0408b60b0752321210000>
+[16285 15881 1689 ] AllocGlyphStorage
+]def 
+108 44 
+PrepFor2015
+AddFontInfoBegin
+AddFontInfo
+/OrigFontType /TrueType def 
+/OrigFontName <416861726F6E69> def
+/OrigFontStyle (Bold) def
+/FSType 6 def
+AddFontInfoEnd
+[16#2c 16#79f1c79 ] AddXUID
+Type42DictEnd
+1 5460 39 <0002008f0000053c0555000d0018003a40276502620b023a103a17028a10
+8a1702590515095907120a070205084e000e0a001a4e061409061910ce2b
+10ce2b003f3f2b2b3130015d5d5d01140007062321112132171617160534
+272623231133323736053cfeffc86a6efdf4020cc0a4a15646fe8f4f69d0
+5151d1684f02abd5fe95462505556b68ae90998d698bfcfd8b6a>/TTE15B9400t00 AddT42Char 
+1 4900 36 <0002000e000005a005550007000a0070404a6a0664070244084b0a023b00
+39023405032a0025050229062607022d09013d09016d0901bd0901090602
+590208092f023f02020204080008300c0122002d050208000a0907064005
+000e2b3939397dcc18107dcc185d5d003f3fcc5d2b3f7dcc183130005d5d
+5d5d015d5d5d5d5d21212721072101210b0205a0fe8558fe165efe89020d
+0183319395eeee0555fca701b3fe4d00>/TTE15B9400t00 AddT42Char 
+1 5304 38 <00010052ffdb04660572001d003940216a046a08022a132a17021d5a0219
+090d5a0a110a0a030209000c1f4e061509061e10ce2b10c4c4003f3f2b7d
+cc182b7dcc183130015d5d25062320272411102536213217112627262322
+07061514171633323736370466ae94fefeccfefc0104cc01058eb132345f
+6d8a668181668a6d5f33332045a5d301530154d3a545fe573d1f395369b7
+b66953391e3e>/TTE15B9400t00 AddT42Char 
+1 6164 44 <0001008f000001f2055500030014400a020200084e010009010410ce2b00
+3f3f31302121112101f2fe9d01630555>/TTE15B9400t00 AddT42Char 
+
+1 0 3 <> /TTE15B9400t00 AddT42Char 
+1 6490 48 <00010052000007010555000c00504032a30a013605a30aa40ba00c040b02
+0802020506080a030800084e0c0b0a0c004e01000d3f01014e080909084e
+07060d3007015d2b7dcc182b5d2b107dcc182b003f3fcc3fcccc3f3f3130
+015d005d212103012301032113210101210701fe9d65feb68dfec574fe9f
+e8015e0115012501610312fcee0312fcee0555fd2802d800>/TTE15B9400t00 AddT42Char 
+1 5606 40 <0001008f000003980555000b0040402b590906098f09ff09024f097f0902
+0959000a095902040a020200080b03084e0105094e010a0db001e001025d
+2b2b7dcc18dcc4003f3f2b2bcc5d5d2b3130212111211121152111211521
+0398fcf70309fe5a018ffe7101a60555fed7e7fed7f3>/TTE15B9400t00 AddT42Char 
+1 6434 47 <0001008f0000039c055500050017400d5900040902020008054e01040d2b
+cc003f3f2b3130212111211121039cfcf3016301aa0555fbd400>/TTE15B9400t00 AddT42Char 
+1 6634 49 <0001008f000005e205550009004a402f6b02640702ab02a40702bb02b407
+02020703080205020308000806024e050209050a01074e00070a00b00bc0
+0b020b105dce2b10c410ce2b10c4003f3f3f3f1239393130005d5d5d2121
+011121112101112105e2fe9dfd73fe9d0163028d01630344fcbc0555fcbd
+0343>/TTE15B9400t00 AddT42Char 
+1 7712 55 <0001000e000003b805550007002440165906050a5906000a060202082f09
+010001054e04010d2bcc10cc5d003f3f2b2b3130012111211121112103b8
+fedafe9dfedf03aa042cfbd4042c0129>/TTE15B9400t00 AddT42Char 
+1 7290 53 <0002008f000004fe0555000e00190045402d640801800c01af0001590513
+0a02570e160d0502030800084f00010a2f0001000a4e0f0a0d4e0414094e
+04030d2b2b2b107dd4185d2b003f3f3f2bc42b3130015d5d5d2121011121
+11213217161514070607033427262323113332373604fefe46feaefe9d02
+28f2745e6c45794735326f4242703135020cfdf4055591759eb56c451b01
+6d49322ffeab2f33>/TTE15B9400t00 AddT42Char 
+1 0 0 <000200800000038005e100030007003b4022020106050007045501060a55
+00040901000008030205060704004906020d4900040d2b2b111239113912
+39003f3f2b2b1139123911123931303311211125211121800300fd800200
+fe0005e1fa1f8004e100>/TTE15B9400t00 AddT42Char 
+/TTE15B9400t00 findfont /CharStrings get begin
+/D 39 def
+/A 36 def
+/C 38 def
+/I 44 def
+/space 3 def
+/M 48 def
+/E 40 def
+/L 47 def
+/N 49 def
+/T 55 def
+/R 53 def
+/.notdef 0 def
+end
+/TTE15B9400t00 findfont /Encoding get
+dup 1 /D put
+dup 2 /A put
+dup 3 /C put
+dup 4 /I put
+dup 5 /space put
+dup 6 /M put
+dup 7 /E put
+dup 8 /L put
+dup 9 /N put
+dup 10 /T put
+dup 11 /R put
+pop
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Text 5.0 0
+/TextInit{TextInitialised? not{/Pscript_Windows_Font & d/TextInitialised? T d
+/fM[1 0 0 1 0 0]d/mFM matrix d/iMat[1 0 0.212557 1 0 0]d}if}b/copyfont{1 ^
+length add dict `{1 ^/FID ne{d}{! !}?}forall & E}b/EncodeDict 11 dict d/bullets
+{{/bullet}repeat}b/rF{3 copyfont @ ` ~ EncodeDict ~ get/Encoding ~ 3 ^/0 eq{&
+/CharStrings known{CharStrings/Eth known not{! EncodeDict/ANSIEncodingOld get}
+if}if}if d E}b/mF{@ 7 1 $ findfont ~{@/Encoding get @ StandardEncoding eq{! T}{
+{ISOLatin1Encoding}stopped{! F}{eq}?{T}{@ ` T 32 1 127{Encoding 1 ^ get
+StandardEncoding 3 -1 $ get eq and}for E}?}?}{F}?{1 ^ ~ rF}{0 copyfont}? 6 -2 $
+! ! ~ !/pd_charset @ where{~ get 128 eq{@ FDV 2 copy get @ length array copy
+put pd_CoverFCRange}if}{!}? 2 ^ ~ definefont fM 5 4 -1 $ put fM 4 0 put fM
+makefont Pscript_Windows_Font 3 1 $ put}b/sLT{: Lw -M currentpoint snap M 0 - 0
+Lc K ;}b/xUP null d/yUP null d/uW null d/xSP null d/ySP null d/sW null d/sSU{N
+/uW ~ d/yUP ~ d/xUP ~ d}b/sU{xUP yUP uW sLT}b/sST{N/sW ~ d/ySP ~ d/xSP ~ d}b/sT
+{xSP ySP sW sLT}b/sR{: + R 0 0 M}b/sRxy{: matrix astore concat 0 0 M}b/eR/; , d
+/AddOrigFP{{&/FontInfo known{&/FontInfo get length 6 add}{6}? dict `
+/WinPitchAndFamily ~ d/WinCharSet ~ d/OrigFontType ~ d/OrigFontStyle ~ d
+/OrigFontName ~ d & E/FontInfo ~ d}{! ! ! ! !}?}b/mFS{makefont
+Pscript_Windows_Font 3 1 $ put}b/mF42D{0 copyfont `/FontName ~ d 2 copy ~ sub 1
+add dict `/.notdef 0 d 2 copy 1 ~{@ 3 ^ sub Encoding ~ get ~ d}for & E
+/CharStrings ~ d ! ! & @ E/FontName get ~ definefont}b/mF42{15 dict ` @ 4 1 $
+FontName ~ d/FontType 0 d/FMapType 2 d/FontMatrix[1 0 0 1 0 0]d 1 ^ 254 add 255
+idiv @ array/Encoding ~ d 0 1 3 -1 $ 1 sub{@ Encoding 3 1 $ put}for/FDepVector
+Encoding length array d/CharStrings 2 dict `/.notdef 0 d & E d 0 1 Encoding
+length 1 sub{@ @ 10 lt{! FontName length 1 add string}{100 lt{FontName length 2
+add string}{FontName length 3 add string}?}? @ 0 FontName @ length string cvs
+putinterval @ 3 -1 $ @ 4 1 $ 3 string cvs FontName length ~ putinterval cvn 1 ^
+256 mul @ 255 add 3 -1 $ 4 ^ findfont mF42D FDepVector 3 1 $ put}for & @ E
+/FontName get ~ definefont ! ! ! mF}b/mF_OTF_V{~ ! ~ ! 4 -1 $ ! findfont 2 ^ ~
+definefont fM @ @ 4 6 -1 $ neg put 5 0 put 90 matrix R matrix concatmatrix
+makefont Pscript_Windows_Font 3 1 $ put}b/mF_TTF_V{3{~ !}repeat 3 -1 $ !
+findfont 1 ^ ~ definefont Pscript_Windows_Font 3 1 $ put}b/UmF{L2?
+{Pscript_Windows_Font ~ undef}{!}?}b/UmF42{@ findfont/FDepVector get{/FontName
+get undefinefont}forall undefinefont}b
+%%EndResource
+end reinitialize
+F /F0 0 /0 F /TTE15B9400t00 mF 
+/F0S64 F0 [100 0 0 -100 0 0 ] mFS
+F0S64 Ji 
+492 1399 M <01020304020506070104030208050307090A070B05>S 
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Win_GdiObject 5.0 0
+/SavedCTM null d/CTMsave{/SavedCTM SavedCTM currentmatrix d}b/CTMrestore
+{SavedCTM setmatrix}b/mp null d/ADO_mxRot null d/GDIHMatrix null d
+/GDIHPatternDict 22 dict d GDIHPatternDict `/PatternType 1 d/PaintType 2 d/Reps
+L2?{1}{5}? d/XStep 8 Reps mul d/YStep XStep d/BBox[0 0 XStep YStep]d/TilingType
+1 d/PaintProc{` 1 Lw[]0 sd PaintData , exec E}b/FGnd null d/BGnd null d
+/HS_Horizontal{horiz}b/HS_Vertical{vert}b/HS_FDiagonal{fdiag}b/HS_BDiagonal
+{biag}b/HS_Cross{horiz vert}b/HS_DiagCross{fdiag biag}b/MaxXYStep XStep YStep
+gt{XStep}{YStep}? d/horiz{Reps{0 4 M XStep 0 - 0 8 +}repeat 0 -8 Reps mul + K}b
+/vert{Reps{4 0 M 0 YStep - 8 0 +}repeat 0 -8 Reps mul + K}b/biag{Reps{0 0 M
+MaxXYStep @ - 0 YStep neg M MaxXYStep @ - 0 8 +}repeat 0 -8 Reps mul + 0 YStep
+M 8 8 - K}b/fdiag{Reps{0 0 M MaxXYStep @ neg - 0 YStep M MaxXYStep @ neg - 0 8
++}repeat 0 -8 Reps mul + MaxXYStep @ M 8 -8 - K}b E/makehatch{4 -2 $/yOrg ~ d
+/xOrg ~ d GDIHPatternDict/PaintData 3 -1 $ put CTMsave GDIHMatrix setmatrix
+GDIHPatternDict matrix xOrg yOrg + mp CTMrestore ~ U ~ 2 ^ put}b/h0{/h0
+/HS_Horizontal makehatch}b/h1{/h1/HS_Vertical makehatch}b/h2{/h2/HS_FDiagonal
+makehatch}b/h3{/h3/HS_BDiagonal makehatch}b/h4{/h4/HS_Cross makehatch}b/h5{/h5
+/HS_DiagCross makehatch}b/GDIBWPatternMx null d/pfprep{save 8 1 $
+/PatternOfTheDay 8 1 $ GDIBWPatternDict `/yOrg ~ d/xOrg ~ d/PaintData ~ d/yExt
+~ d/Width ~ d/BGnd ~ d/FGnd ~ d/Height yExt RepsV mul d/mx[Width 0 0 Height 0
+0]d E build_pattern ~ !}b/pfbf{/fEOFill ~ d pfprep hbf fEOFill{O}{L}? restore}b
+/GraphInit{GDIHMatrix null eq{/SavedCTM matrix d : ADO_mxRot concat 0 0 snap +
+: 0.48 @ GDIHPatternDict ` YStep mul ~ XStep mul ~ nonzero_dsnap YStep V ~
+XStep V ~ E +S/GDIHMatrix matrix currentmatrix readonly d ; : 0.24 -0.24 +S
+GDIBWPatternDict ` Width Height E nonzero_dsnap +S/GDIBWPatternMx matrix
+currentmatrix readonly d ; ;}if}b
+%%EndResource
+%%BeginResource: file Pscript_Win_GdiObject_L3 5.0 0
+/GDIBWPatternDict 25 dict @ `/PatternType 1 d/PaintType 1 d/RepsV 1 d/RepsH 1 d
+/BBox[0 0 RepsH 1]d/TilingType 1 d/XStep 1 d/YStep 1 d/Height 8 RepsV mul d
+/Width 8 d/mx[Width 0 0 Height neg 0 Height]d/FGnd null d/BGnd null d
+/SetBGndFGnd{BGnd null ne{BGnd aload ! scol BBox aload ! 2 ^ sub ~ 3 ^ sub ~
+rf}if FGnd null ne{FGnd aload ! scol}if}b/PaintProc{` SetBGndFGnd RepsH{Width
+Height F mx PaintData imagemask Width 0 +}repeat E}b E d/mp/makepattern , d
+/build_pattern{CTMsave GDIBWPatternMx setmatrix/nupangle where{! nupangle -90
+eq{nupangle R}if}if GDIBWPatternDict @ ` Width Height ne{Width Height gt{Width
+Height V 1}{1 Height Width V}? +S}if xOrg yOrg E matrix + mp CTMrestore}b/hbf
+{setpattern}b/hf{:/fEOFill ~ d ~ ! setpattern fEOFill{O}{L}? ;}b/pbf{: !
+/fEOFill ~ d GDIBWPatternDict `/yOrg ~ d/xOrg ~ d/PaintData ~ d/OutputBPP ~ d
+/Height ~ d/Width ~ d/PaintType 1 d/PatternType 1 d/TilingType 1 d/BBox[0 0
+Width Height]d/XStep Width d/YStep Height d/mx xOrg yOrg matrix + d 20 dict @ `
+/ImageType 1 d/Width Width d/Height Height d/ImageMatrix[1 0 0 1 0 0]d
+/BitsPerComponent 8 d OutputBPP 24 eq{/Decode[0 1 0 1 0 1]d}{OutputBPP 8 eq{
+/Decode[0 1]d}{/Decode[0 1 0 1 0 1 0 1]d}?}?/DataSource{PaintData}d E/ImageDict
+~ d/PaintProc{` ImageDict image E}b & mx makepattern setpattern E fEOFill{O}{L}
+? ;}b/mask_pbf{:/fEOFill ~ d 20 dict `/yOrg ~ d/xOrg ~ d/PaintData ~ d/Height ~
+d/Width ~ d/PatternType 1 d/PaintType 2 d/TilingType 1 d/BBox[0 0 Width Height]
+d/XStep Width d/YStep Height d/mx xOrg yOrg matrix + d/PaintProc{` Width Height
+T 1 1 dtransform abs ~ abs ~ 0 0 3 -1 $ 0 0 6 array astore{PaintData}imagemask
+E}b & mx makepattern setpattern E fEOFill{O}{L}? ;}b/grf4{4 dict `/ShadingType
+4 d/DataSource ~ d/ColorSpace ~ d & E shfill}b
+%%EndResource
+end reinitialize
+N 578 1497 M 578 1502 576 1506 574 1509 -c 570 1513 563 1515 555 1515 -c 527 1515 I 527 1449 I 553 1449 I 565 1449 572 1455 572 1466 -c 572 1470 571 1473 569 1475 -c 568 1477 567 1479 564 1480 -c 569 1481 573 1483 575 1486 -c 577 1489 578 1493 578 1497 -c C 
+556 1469 M 556 1466 554 1463 551 1463 -c 550 1462 549 1462 547 1462 -c 544 1462 I 544 1475 I 547 1475 I 550 1475 553 1474 554 1473 -c 555 1472 556 1470 556 1469 -c C 
+560 1495 M 560 1491 558 1489 554 1489 -c 553 1488 551 1488 548 1488 -c 544 1488 I 544 1502 I 548 1502 I 553 1502 556 1502 557 1501 -c 559 1500 560 1498 560 1495 -c C 
+608 1498 M 586 1498 I 586 1488 I 608 1488 I 608 1498 I C 
+678 1482 M 678 1489 676 1495 672 1501 -c 668 1507 663 1511 656 1514 -c 653 1515 649 1515 646 1515 -c 620 1515 I 620 1449 I 646 1449 I 652 1449 658 1451 663 1454 -c 668 1457 672 1462 675 1468 -c 677 1472 678 1477 678 1482 -c C 
+660 1482 M 660 1478 659 1474 657 1470 -c 653 1466 648 1463 641 1463 -c 637 1463 I 637 1501 I 641 1501 I 648 1501 653 1499 657 1494 -c 659 1491 660 1487 660 1482 -c C 
+747 1487 M 747 1491 747 1495 746 1498 -c 745 1502 743 1506 739 1510 -c 734 1515 726 1517 717 1517 -c 708 1517 701 1515 696 1509 -c 693 1507 691 1503 690 1499 -c 689 1496 689 1492 689 1487 -c 689 1449 I 706 1449 I 706 1485 I 706 1488 706 1490 706 1491 -c 707 1496 709 1499 713 1501 -c 714 1502 716 1502 718 1502 -c 722 1502 725 1501 727 1498 -c 729 1496 730 1491 730 1485 -c 730 1449 I 747 1449 I 747 1487 I C 
+799 1515 M 761 1515 I 761 1449 I 778 1449 I 778 1501 I 799 1501 I 799 1515 I C 
+894 1482 M 894 1489 892 1495 888 1501 -c 884 1507 879 1511 872 1514 -c 869 1515 865 1515 862 1515 -c 836 1515 I 836 1449 I 862 1449 I 868 1449 874 1451 879 1454 -c 884 1457 888 1462 891 1468 -c 893 1472 894 1477 894 1482 -c C 
+876 1482 M 876 1478 875 1474 873 1470 -c 869 1466 864 1463 857 1463 -c 853 1463 I 853 1501 I 857 1501 I 864 1501 869 1499 873 1494 -c 875 1491 876 1487 876 1482 -c C 
+968 1515 M 950 1515 I 946 1504 I 922 1504 I 917 1515 I 899 1515 I 924 1449 I 943 1449 I 968 1515 I C 
+941 1491 M 934 1469 I 926 1491 I 941 1491 I C 
+1024 1514 M 1018 1516 1013 1517 1008 1517 -c 1000 1517 992 1515 986 1509 -c 977 1502 973 1493 973 1482 -c 973 1471 977 1462 986 1455 -c 992 1450 1000 1447 1008 1447 -c 1013 1447 1018 1449 1024 1451 -c 1024 1472 I 1022 1470 1021 1468 1019 1467 -c 1016 1465 1013 1464 1009 1464 -c 1005 1464 1001 1466 997 1468 -c 993 1472 991 1476 991 1482 -c 991 1488 993 1493 997 1496 -c 1001 1499 1005 1500 1009 1500 -c 1013 1500 1016 1500 1019 1498 -c 1021 1497 1022 1495 1024 1493 -c 1024 1514 I C 
+1052 1515 M 1035 1515 I 1035 1449 I 1052 1449 I 1052 1515 I C 
+1129 1515 M 1111 1515 I 1107 1504 I 1083 1504 I 1078 1515 I 1060 1515 I 1085 1449 I 1104 1449 I 1129 1515 I C 
+1102 1491 M 1095 1469 I 1087 1491 I 1102 1491 I C 
+1187 1515 M 1177 1515 I 1177 1487 I 1174 1490 I 1172 1491 1171 1491 1170 1491 -c 1170 1481 I 1174 1478 1177 1474 1179 1470 -c 1187 1470 I 1187 1515 I C 
+1238 1492 M 1238 1499 1236 1505 1233 1509 -c 1230 1514 1226 1516 1221 1516 -c 1216 1516 1211 1514 1208 1509 -c 1205 1505 1204 1499 1204 1492 -c 1204 1485 1206 1480 1208 1476 -c 1211 1471 1216 1469 1221 1469 -c 1226 1469 1230 1471 1233 1476 -c 1236 1480 1238 1485 1238 1492 -c C 
+1227 1492 M 1227 1488 1226 1485 1225 1483 -c 1224 1480 1223 1479 1221 1479 -c 1219 1479 1218 1480 1216 1483 -c 1215 1485 1215 1488 1215 1492 -c 1215 1501 1217 1506 1221 1506 -c 1225 1506 1227 1501 1227 1492 -c C 
+1271 1515 M 1261 1515 I 1261 1487 I 1258 1490 I 1256 1491 1255 1491 1254 1491 -c 1254 1481 I 1258 1478 1261 1474 1263 1470 -c 1271 1470 I 1271 1515 I C 
+1302 1506 M 1296 1522 I 1288 1522 I 1292 1506 I 1302 1506 I C 
+1404 1515 M 1386 1515 I 1382 1504 I 1358 1504 I 1353 1515 I 1335 1515 I 1360 1449 I 1379 1449 I 1404 1515 I C 
+1377 1491 M 1370 1469 I 1362 1491 I 1377 1491 I C 
+1463 1471 M 1463 1477 1461 1482 1458 1486 -c 1455 1491 1449 1493 1440 1493 -c 1429 1493 I 1429 1515 I 1412 1515 I 1412 1449 I 1440 1449 I 1448 1449 1453 1451 1457 1456 -c 1461 1460 1463 1465 1463 1471 -c C 
+1445 1471 M 1445 1469 1444 1467 1443 1465 -c 1441 1464 1439 1463 1435 1463 -c 1429 1463 I 1429 1479 I 1435 1479 I 1439 1479 1441 1479 1443 1477 -c 1444 1476 1445 1474 1445 1471 -c C 
+1482 1510 M 1482 1512 1482 1513 1481 1515 -c 1480 1516 1478 1516 1477 1516 -c 1475 1516 1474 1516 1472 1515 -c 1471 1514 1471 1512 1471 1510 -c 1471 1509 1471 1507 1472 1506 -c 1473 1505 1475 1505 1477 1505 -c 1478 1505 1480 1505 1481 1506 -c 1482 1507 1482 1509 1482 1510 -c C 
+1516 1515 M 1506 1515 I 1506 1487 I 1503 1490 I 1501 1491 1500 1491 1499 1491 -c 1499 1481 I 1503 1478 1506 1474 1508 1470 -c 1516 1470 I 1516 1515 I C 
+1575 1506 M 1569 1522 I 1561 1522 I 1565 1506 I 1575 1506 I C 
+1660 1493 M 1660 1505 1655 1512 1645 1515 -c 1642 1517 1638 1517 1634 1517 -c 1626 1517 1618 1515 1611 1510 -c 1618 1496 I 1623 1500 1629 1503 1634 1503 -c 1636 1503 1638 1502 1639 1501 -c 1641 1500 1642 1498 1642 1496 -c 1642 1494 1641 1493 1639 1491 -c 1638 1490 1635 1489 1632 1488 -c 1627 1487 1625 1486 1623 1486 -c 1622 1485 1620 1484 1619 1483 -c 1615 1480 1614 1476 1614 1470 -c 1614 1464 1615 1458 1619 1454 -c 1623 1449 1629 1447 1636 1447 -c 1643 1447 1651 1449 1657 1453 -c 1651 1466 I 1647 1463 1643 1462 1639 1462 -c 1637 1462 1636 1462 1634 1463 -c 1632 1464 1632 1466 1632 1467 -c 1632 1469 1633 1471 1635 1472 -c 1636 1473 1639 1474 1644 1475 -c 1650 1477 1654 1479 1657 1483 -c 1659 1486 1660 1489 1660 1493 -c C 
+1709 1515 M 1671 1515 I 1671 1449 I 1709 1449 I 1709 1463 I 1688 1463 I 1688 1475 I 1708 1475 I 1708 1489 I 1688 1489 I 1688 1501 I 1709 1501 I 1709 1515 I C 
+1768 1514 M 1762 1516 1757 1517 1752 1517 -c 1744 1517 1736 1515 1730 1509 -c 1721 1502 1717 1493 1717 1482 -c 1717 1471 1721 1462 1730 1455 -c 1736 1450 1744 1447 1752 1447 -c 1757 1447 1762 1449 1768 1451 -c 1768 1472 I 1766 1470 1765 1468 1763 1467 -c 1760 1465 1757 1464 1753 1464 -c 1749 1464 1745 1466 1741 1468 -c 1737 1472 1735 1476 1735 1482 -c 1735 1488 1737 1493 1741 1496 -c 1745 1499 1749 1500 1753 1500 -c 1757 1500 1760 1500 1763 1498 -c 1765 1497 1766 1495 1768 1493 -c 1768 1514 I C 
+1818 1463 M 1804 1463 I 1804 1515 I 1787 1515 I 1787 1463 I 1773 1463 I 1773 1449 I 1818 1449 I 1818 1463 I C 
+1897 1482 M 1897 1491 1894 1499 1888 1506 -c 1881 1514 1872 1518 1860 1518 -c 1848 1518 1839 1514 1832 1506 -c 1826 1499 1823 1491 1823 1482 -c 1823 1478 1824 1474 1825 1470 -c 1827 1465 1829 1462 1832 1459 -c 1839 1451 1848 1447 1860 1447 -c 1872 1447 1881 1451 1888 1459 -c 1894 1466 1897 1473 1897 1482 -c C 
+1879 1482 M 1879 1478 1877 1474 1874 1470 -c 1870 1466 1866 1464 1860 1464 -c 1856 1464 1852 1465 1849 1467 -c 1846 1469 1844 1472 1842 1476 -c 1841 1478 1841 1480 1841 1482 -c 1841 1487 1843 1491 1846 1494 -c 1849 1499 1854 1501 1860 1501 -c 1866 1501 1871 1499 1874 1494 -c 1877 1491 1879 1487 1879 1482 -c C 
+1963 1515 M 1942 1515 I 1925 1490 I 1925 1515 I 1908 1515 I 1908 1449 I 1935 1449 I 1943 1449 1949 1451 1952 1456 -c 1955 1460 1957 1464 1957 1469 -c 1957 1475 1955 1480 1952 1483 -c 1950 1486 1946 1487 1942 1488 -c 1963 1515 I C 
+1939 1470 M 1939 1468 1938 1466 1936 1464 -c 1935 1463 1932 1462 1929 1462 -c 1925 1462 I 1925 1479 I 1929 1479 I 1932 1479 1935 1478 1936 1476 -c 1938 1475 1939 1473 1939 1470 -c C 
+2030 1505 M 2026 1515 I 1996 1515 I 1996 1515 I 2012 1494 I 2014 1491 2016 1488 2016 1486 -c 2016 1483 2015 1481 2013 1480 -c 2011 1479 2009 1478 2006 1478 -c 2004 1478 2002 1479 1999 1480 -c 1999 1470 I 2002 1469 2006 1469 2009 1469 -c 2014 1469 2018 1470 2022 1473 -c 2025 1476 2027 1479 2027 1483 -c 2027 1487 2025 1491 2023 1495 -c 2016 1505 I 2030 1505 I C 
+2080 1506 M 2074 1522 I 2066 1522 I 2070 1506 I 2080 1506 I C 
+2170 1497 M 2170 1502 2168 1506 2166 1509 -c 2162 1513 2155 1515 2147 1515 -c 2119 1515 I 2119 1449 I 2145 1449 I 2157 1449 2164 1455 2164 1466 -c 2164 1470 2163 1473 2161 1475 -c 2160 1477 2159 1479 2156 1480 -c 2161 1481 2165 1483 2167 1486 -c 2169 1489 2170 1493 2170 1497 -c C 
+2148 1469 M 2148 1466 2146 1463 2143 1463 -c 2142 1462 2141 1462 2139 1462 -c 2136 1462 I 2136 1475 I 2139 1475 I 2142 1475 2145 1474 2146 1473 -c 2147 1472 2148 1470 2148 1469 -c C 
+2152 1495 M 2152 1491 2150 1489 2146 1489 -c 2145 1488 2143 1488 2140 1488 -c 2136 1488 I 2136 1502 I 2140 1502 I 2145 1502 2148 1502 2149 1501 -c 2151 1500 2152 1498 2152 1495 -c C 
+2239 1487 M 2239 1491 2239 1495 2238 1498 -c 2237 1502 2235 1506 2231 1510 -c 2226 1515 2218 1517 2209 1517 -c 2200 1517 2193 1515 2188 1509 -c 2185 1507 2183 1503 2182 1499 -c 2181 1496 2181 1492 2181 1487 -c 2181 1449 I 2198 1449 I 2198 1485 I 2198 1488 2198 1490 2198 1491 -c 2199 1496 2201 1499 2205 1501 -c 2206 1502 2208 1502 2210 1502 -c 2214 1502 2217 1501 2219 1498 -c 2221 1496 2222 1491 2222 1485 -c 2222 1449 I 2239 1449 I 2239 1487 I C 
+2301 1514 M 2295 1516 2290 1517 2285 1517 -c 2277 1517 2269 1515 2263 1509 -c 2254 1502 2250 1493 2250 1482 -c 2250 1471 2254 1462 2263 1455 -c 2269 1450 2277 1447 2285 1447 -c 2290 1447 2295 1449 2301 1451 -c 2301 1472 I 2299 1470 2298 1468 2296 1467 -c 2293 1465 2290 1464 2286 1464 -c 2282 1464 2278 1466 2274 1468 -c 2270 1472 2268 1476 2268 1482 -c 2268 1488 2270 1493 2274 1496 -c 2278 1499 2282 1500 2286 1500 -c 2290 1500 2293 1500 2296 1498 -c 2298 1497 2299 1495 2301 1493 -c 2301 1514 I C 
+2370 1487 M 2370 1491 2370 1495 2369 1498 -c 2368 1502 2366 1506 2362 1510 -c 2357 1515 2349 1517 2340 1517 -c 2331 1517 2324 1515 2319 1509 -c 2316 1507 2314 1503 2313 1499 -c 2312 1496 2312 1492 2312 1487 -c 2312 1449 I 2329 1449 I 2329 1485 I 2329 1488 2329 1490 2329 1491 -c 2330 1496 2332 1499 2336 1501 -c 2337 1502 2339 1502 2341 1502 -c 2345 1502 2348 1501 2350 1498 -c 2352 1496 2353 1491 2353 1485 -c 2353 1449 I 2370 1449 I 2370 1487 I C 
+2439 1515 M 2418 1515 I 2401 1490 I 2401 1515 I 2384 1515 I 2384 1449 I 2411 1449 I 2419 1449 2425 1451 2428 1456 -c 2431 1460 2433 1464 2433 1469 -c 2433 1475 2431 1480 2428 1483 -c 2426 1486 2422 1487 2418 1488 -c 2439 1515 I C 
+2415 1470 M 2415 1468 2414 1466 2412 1464 -c 2411 1463 2408 1462 2405 1462 -c 2401 1462 I 2401 1479 I 2405 1479 I 2408 1479 2411 1478 2412 1476 -c 2414 1475 2415 1473 2415 1470 -c C 
+2485 1515 M 2447 1515 I 2447 1449 I 2485 1449 I 2485 1463 I 2464 1463 I 2464 1475 I 2484 1475 I 2484 1489 I 2464 1489 I 2464 1501 I 2485 1501 I 2485 1515 I C 
+2542 1493 M 2542 1505 2537 1512 2527 1515 -c 2524 1517 2520 1517 2516 1517 -c 2508 1517 2500 1515 2493 1510 -c 2500 1496 I 2505 1500 2511 1503 2516 1503 -c 2518 1503 2520 1502 2521 1501 -c 2523 1500 2524 1498 2524 1496 -c 2524 1494 2523 1493 2521 1491 -c 2520 1490 2517 1489 2514 1488 -c 2509 1487 2507 1486 2505 1486 -c 2504 1485 2502 1484 2501 1483 -c 2497 1480 2496 1476 2496 1470 -c 2496 1464 2497 1458 2501 1454 -c 2505 1449 2511 1447 2518 1447 -c 2525 1447 2533 1449 2539 1453 -c 2533 1466 I 2529 1463 2525 1462 2521 1462 -c 2519 1462 2518 1462 2516 1463 -c 2514 1464 2514 1466 2514 1467 -c 2514 1469 2515 1471 2517 1472 -c 2518 1473 2521 1474 2526 1475 -c 2532 1477 2536 1479 2539 1483 -c 2541 1486 2542 1489 2542 1493 -c C 
+2592 1463 M 2578 1463 I 2578 1515 I 2561 1515 I 2561 1463 I 2547 1463 I 2547 1449 I 2592 1449 I 2592 1463 I C 
+2617 1515 M 2600 1515 I 2600 1449 I 2617 1449 I 2617 1515 I C 
+2669 1486 M 2669 1487 2669 1489 2668 1490 -c 2667 1491 2665 1491 2664 1491 -c 2662 1491 2660 1491 2659 1490 -c 2658 1489 2658 1487 2658 1486 -c 2658 1484 2658 1482 2659 1481 -c 2660 1480 2662 1480 2664 1480 -c 2665 1480 2667 1480 2668 1481 -c 2669 1482 2669 1484 2669 1486 -c C 
+2669 1506 M 2663 1522 I 2655 1522 I 2660 1506 I 2669 1506 I C 
+2754 1463 M 2740 1463 I 2740 1515 I 2723 1515 I 2723 1463 I 2709 1463 I 2709 1449 I 2754 1449 I 2754 1463 I C 
+2800 1515 M 2762 1515 I 2762 1449 I 2800 1449 I 2800 1463 I 2779 1463 I 2779 1475 I 2799 1475 I 2799 1489 I 2779 1489 I 2779 1501 I 2800 1501 I 2800 1515 I C 
+2849 1515 M 2811 1515 I 2811 1449 I 2828 1449 I 2828 1501 I 2849 1501 I 2849 1515 I C 
+2867 1486 M 2867 1487 2867 1489 2866 1490 -c 2865 1491 2863 1491 2861 1491 -c 2860 1491 2858 1491 2857 1490 -c 2856 1489 2855 1487 2855 1486 -c 2855 1484 2856 1482 2857 1481 -c 2858 1480 2860 1480 2861 1480 -c 2863 1480 2864 1480 2866 1481 -c 2867 1482 2867 1484 2867 1486 -c C 
+2867 1511 M 2867 1512 2867 1514 2866 1515 -c 2865 1516 2863 1516 2861 1516 -c 2860 1516 2858 1516 2857 1515 -c 2856 1514 2855 1512 2855 1511 -c 2855 1509 2856 1508 2857 1506 -c 2858 1505 2860 1505 2861 1505 -c 2863 1505 2864 1505 2866 1506 -c 2867 1507 2867 1509 2867 1511 -c C 
+2945 1505 M 2940 1515 I 2911 1515 I 2911 1515 I 2927 1494 I 2929 1491 2931 1488 2931 1486 -c 2931 1483 2930 1481 2928 1480 -c 2926 1479 2924 1478 2921 1478 -c 2919 1478 2917 1479 2914 1480 -c 2914 1470 I 2917 1469 2921 1469 2924 1469 -c 2929 1469 2933 1470 2937 1473 -c 2940 1476 2942 1479 2942 1483 -c 2942 1487 2940 1491 2938 1495 -c 2931 1505 I 2945 1505 I C 
+2978 1515 M 2968 1515 I 2968 1487 I 2965 1490 I 2963 1491 2962 1491 2961 1491 -c 2961 1481 I 2965 1478 2968 1474 2970 1470 -c 2978 1470 I 2978 1515 I C 
+3020 1515 M 3010 1515 I 3010 1487 I 3007 1490 I 3005 1491 3004 1491 3003 1491 -c 3003 1481 I 3007 1478 3010 1474 3012 1470 -c 3020 1470 I 3020 1515 I C 
+3050 1510 M 3050 1512 3050 1513 3049 1515 -c 3048 1516 3046 1516 3045 1516 -c 3043 1516 3042 1516 3040 1515 -c 3039 1514 3039 1512 3039 1510 -c 3039 1509 3039 1507 3040 1506 -c 3041 1505 3043 1505 3045 1505 -c 3046 1505 3048 1505 3049 1506 -c 3050 1507 3050 1509 3050 1510 -c C 
+3091 1470 M 3089 1478 I 3077 1478 I 3075 1484 I 3080 1484 3084 1486 3086 1488 -c 3089 1491 3091 1494 3091 1499 -c 3091 1505 3088 1509 3084 1512 -c 3081 1515 3076 1516 3071 1516 -c 3069 1516 3066 1516 3062 1515 -c 3062 1505 I 3065 1506 3067 1507 3070 1507 -c 3076 1507 3080 1504 3080 1499 -c 3080 1495 3076 1493 3069 1492 -c 3068 1492 3067 1492 3066 1492 -c 3064 1492 3063 1492 3063 1492 -c 3069 1470 I 3091 1470 I C 
+3135 1500 M 3132 1509 I 3130 1509 I 3130 1515 I 3120 1515 I 3120 1509 I 3102 1509 I 3102 1501 I 3120 1470 I 3130 1470 I 3130 1500 I 3135 1500 I C 
+3120 1500 M 3120 1486 I 3112 1500 I 3120 1500 I C 
+3156 1510 M 3156 1512 3156 1513 3155 1515 -c 3154 1516 3152 1516 3151 1516 -c 3149 1516 3148 1516 3146 1515 -c 3145 1514 3145 1512 3145 1510 -c 3145 1509 3145 1507 3146 1506 -c 3147 1505 3149 1505 3151 1505 -c 3152 1505 3154 1505 3155 1506 -c 3156 1507 3156 1509 3156 1510 -c C 
+3199 1492 M 3199 1499 3197 1505 3194 1509 -c 3191 1514 3187 1516 3182 1516 -c 3177 1516 3172 1514 3169 1509 -c 3166 1505 3165 1499 3165 1492 -c 3165 1485 3167 1480 3169 1476 -c 3172 1471 3177 1469 3182 1469 -c 3187 1469 3191 1471 3194 1476 -c 3197 1480 3199 1485 3199 1492 -c C 
+3188 1492 M 3188 1488 3187 1485 3186 1483 -c 3185 1480 3184 1479 3182 1479 -c 3180 1479 3179 1480 3177 1483 -c 3176 1485 3176 1488 3176 1492 -c 3176 1501 3178 1506 3182 1506 -c 3186 1506 3188 1501 3188 1492 -c C 
+3239 1470 M 3237 1478 I 3225 1478 I 3223 1484 I 3228 1484 3232 1486 3234 1488 -c 3237 1491 3239 1494 3239 1499 -c 3239 1505 3236 1509 3232 1512 -c 3229 1515 3224 1516 3219 1516 -c 3217 1516 3214 1516 3210 1515 -c 3210 1505 I 3213 1506 3215 1507 3218 1507 -c 3224 1507 3228 1504 3228 1499 -c 3228 1495 3224 1493 3217 1492 -c 3216 1492 3215 1492 3214 1492 -c 3212 1492 3211 1492 3211 1492 -c 3217 1470 I 3239 1470 I C 
+ L 492 1632 M <05>S 
+N 547 1747 M 541 1749 536 1751 531 1751 -c 523 1751 515 1748 509 1743 -c 500 1736 496 1727 496 1716 -c 496 1705 500 1696 509 1689 -c 515 1684 523 1681 531 1681 -c 536 1681 541 1682 547 1684 -c 547 1705 I 545 1703 544 1701 542 1700 -c 539 1698 536 1698 532 1698 -c 528 1698 524 1699 520 1702 -c 516 1705 514 1710 514 1716 -c 514 1722 516 1726 520 1730 -c 524 1733 528 1734 532 1734 -c 536 1734 539 1733 542 1731 -c 544 1730 545 1729 547 1727 -c 547 1747 I C 
+609 1726 M 609 1732 607 1738 603 1742 -c 598 1748 591 1751 582 1751 -c 573 1751 566 1748 561 1742 -c 557 1738 555 1732 555 1726 -c 555 1720 557 1715 561 1710 -c 566 1705 573 1702 582 1702 -c 591 1702 598 1705 603 1710 -c 607 1715 609 1720 609 1726 -c C 
+593 1726 M 593 1723 592 1721 589 1719 -c 587 1717 585 1716 582 1716 -c 579 1716 576 1717 574 1719 -c 572 1721 571 1724 571 1726 -c 571 1729 572 1731 574 1733 -c 576 1735 579 1737 582 1737 -c 585 1737 587 1736 589 1734 -c 591 1732 593 1729 593 1726 -c C 
+666 1749 M 650 1749 I 650 1726 I 650 1722 650 1719 649 1718 -c 648 1716 646 1715 643 1715 -c 640 1715 638 1716 637 1718 -c 635 1719 634 1721 634 1725 -c 634 1749 I 618 1749 I 618 1704 I 634 1704 I 634 1709 I 636 1707 638 1706 640 1705 -c 642 1703 645 1703 649 1703 -c 654 1703 658 1704 661 1706 -c 665 1709 666 1714 666 1720 -c 666 1749 I C 
+714 1734 M 714 1739 713 1742 709 1745 -c 705 1749 700 1751 693 1751 -c 687 1751 681 1749 675 1745 -c 681 1734 I 685 1737 689 1739 693 1739 -c 697 1739 698 1737 698 1735 -c 698 1734 698 1733 697 1732 -c 696 1732 694 1731 691 1731 -c 688 1730 687 1730 686 1729 -c 683 1728 680 1726 679 1723 -c 678 1722 678 1720 678 1718 -c 678 1714 680 1711 682 1708 -c 686 1704 691 1702 698 1702 -c 703 1702 708 1703 713 1705 -c 708 1715 I 705 1714 702 1713 699 1713 -c 696 1713 694 1714 694 1716 -c 694 1717 695 1718 696 1719 -c 697 1719 698 1719 701 1720 -c 705 1721 709 1722 711 1724 -c 713 1727 714 1730 714 1734 -c C 
+771 1732 M 771 1741 767 1746 759 1749 -c 756 1750 751 1751 747 1751 -c 737 1751 730 1748 726 1744 -c 724 1741 722 1737 722 1732 -c 722 1704 I 738 1704 I 738 1729 I 738 1732 739 1734 741 1735 -c 742 1737 744 1738 747 1738 -c 749 1738 751 1737 753 1735 -c 754 1734 755 1732 755 1729 -c 755 1704 I 771 1704 I 771 1732 I C 
+797 1749 M 781 1749 I 781 1675 I 797 1675 I 797 1749 I C 
+835 1717 M 826 1717 I 826 1749 I 810 1749 I 810 1717 I 805 1717 I 805 1704 I 810 1704 I 810 1690 I 826 1690 I 826 1704 I 835 1704 I 835 1717 I C 
+893 1749 M 877 1749 I 877 1744 I 875 1746 873 1747 872 1748 -c 869 1750 866 1750 863 1750 -c 857 1750 852 1748 848 1744 -c 842 1740 840 1734 840 1726 -c 840 1718 842 1712 848 1708 -c 852 1704 857 1702 862 1702 -c 866 1702 869 1703 872 1704 -c 873 1705 875 1706 877 1708 -c 877 1704 I 893 1704 I 893 1749 I C 
+877 1726 M 877 1723 876 1721 874 1719 -c 872 1717 870 1716 867 1716 -c 864 1716 861 1717 859 1719 -c 857 1721 856 1724 856 1726 -c 856 1729 857 1731 859 1733 -c 861 1735 863 1736 867 1736 -c 870 1736 872 1735 874 1733 -c 876 1731 877 1729 877 1726 -c C 
+930 1717 M 921 1717 I 921 1749 I 905 1749 I 905 1717 I 900 1717 I 900 1704 I 905 1704 I 905 1690 I 921 1690 I 921 1704 I 930 1704 I 930 1717 I C 
+953 1686 M 953 1689 953 1691 951 1692 -c 949 1694 947 1695 944 1695 -c 942 1695 940 1694 938 1692 -c 936 1691 935 1689 935 1686 -c 935 1684 936 1681 938 1680 -c 940 1678 942 1677 944 1677 -c 947 1677 949 1678 951 1680 -c 953 1682 953 1684 953 1686 -c C 
+952 1749 M 936 1749 I 936 1704 I 952 1704 I 952 1749 I C 
+1012 1729 M 978 1729 I 978 1736 981 1739 988 1739 -c 991 1739 994 1738 995 1735 -c 1011 1735 I 1010 1739 1008 1742 1005 1745 -c 1001 1749 995 1751 988 1751 -c 979 1751 972 1748 967 1742 -c 963 1738 962 1733 962 1727 -c 962 1720 964 1714 968 1709 -c 973 1704 979 1702 987 1702 -c 997 1702 1004 1706 1008 1713 -c 1010 1717 1012 1722 1012 1727 -c 1012 1729 I C 
+997 1720 M 996 1715 992 1712 988 1712 -c 985 1712 983 1713 981 1715 -c 980 1716 979 1718 978 1720 -c 997 1720 I C 
+1101 1726 M 1101 1734 1099 1740 1093 1745 -c 1089 1749 1084 1750 1079 1750 -c 1076 1750 1072 1750 1070 1748 -c 1068 1747 1066 1746 1064 1744 -c 1064 1771 I 1048 1771 I 1048 1704 I 1064 1704 I 1064 1709 I 1066 1707 1067 1705 1069 1704 -c 1072 1703 1075 1702 1078 1702 -c 1084 1702 1089 1704 1093 1708 -c 1099 1713 1101 1719 1101 1726 -c C 
+1085 1726 M 1085 1724 1084 1721 1082 1719 -c 1080 1717 1078 1716 1074 1716 -c 1071 1716 1069 1717 1067 1719 -c 1065 1721 1064 1723 1064 1726 -c 1064 1729 1065 1731 1067 1733 -c 1069 1735 1071 1736 1074 1736 -c 1077 1736 1080 1735 1082 1733 -c 1084 1731 1085 1729 1085 1726 -c C 
+1159 1729 M 1125 1729 I 1125 1736 1128 1739 1135 1739 -c 1138 1739 1141 1738 1142 1735 -c 1158 1735 I 1157 1739 1155 1742 1152 1745 -c 1148 1749 1142 1751 1135 1751 -c 1126 1751 1119 1748 1114 1742 -c 1110 1738 1109 1733 1109 1727 -c 1109 1720 1111 1714 1115 1709 -c 1120 1704 1126 1702 1134 1702 -c 1144 1702 1151 1706 1155 1713 -c 1157 1717 1159 1722 1159 1727 -c 1159 1729 I C 
+1144 1720 M 1143 1715 1139 1712 1135 1712 -c 1132 1712 1130 1713 1128 1715 -c 1127 1716 1126 1718 1125 1720 -c 1144 1720 I C 
+1215 1749 M 1199 1749 I 1199 1726 I 1199 1722 1199 1719 1198 1718 -c 1197 1716 1195 1715 1192 1715 -c 1189 1715 1187 1716 1186 1718 -c 1184 1719 1183 1721 1183 1725 -c 1183 1749 I 1167 1749 I 1167 1704 I 1183 1704 I 1183 1709 I 1185 1707 1187 1706 1189 1705 -c 1191 1703 1194 1703 1198 1703 -c 1203 1703 1207 1704 1210 1706 -c 1214 1709 1215 1714 1215 1720 -c 1215 1749 I C 
+1253 1717 M 1244 1717 I 1244 1749 I 1228 1749 I 1228 1717 I 1223 1717 I 1223 1704 I 1228 1704 I 1228 1690 I 1244 1690 I 1244 1704 I 1253 1704 I 1253 1717 I C 
+1293 1718 M 1291 1717 1289 1717 1287 1717 -c 1281 1717 1278 1719 1276 1723 -c 1276 1725 1275 1727 1275 1729 -c 1275 1749 I 1259 1749 I 1259 1704 I 1275 1704 I 1275 1711 I 1277 1708 1279 1706 1281 1705 -c 1284 1704 1287 1703 1290 1703 -c 1291 1703 1292 1703 1293 1703 -c 1293 1718 I C 
+1349 1732 M 1349 1741 1345 1746 1337 1749 -c 1334 1750 1329 1751 1325 1751 -c 1315 1751 1308 1748 1304 1744 -c 1302 1741 1300 1737 1300 1732 -c 1300 1704 I 1316 1704 I 1316 1729 I 1316 1732 1317 1734 1319 1735 -c 1320 1737 1322 1738 1325 1738 -c 1327 1738 1329 1737 1331 1735 -c 1332 1734 1333 1732 1333 1729 -c 1333 1704 I 1349 1704 I 1349 1732 I C 
+1440 1726 M 1440 1734 1438 1740 1432 1745 -c 1428 1749 1423 1750 1418 1750 -c 1415 1750 1411 1750 1409 1748 -c 1407 1747 1405 1746 1403 1744 -c 1403 1771 I 1387 1771 I 1387 1704 I 1403 1704 I 1403 1709 I 1405 1707 1406 1705 1408 1704 -c 1411 1703 1414 1702 1417 1702 -c 1423 1702 1428 1704 1432 1708 -c 1438 1713 1440 1719 1440 1726 -c C 
+1424 1726 M 1424 1724 1423 1721 1421 1719 -c 1419 1717 1417 1716 1413 1716 -c 1410 1716 1408 1717 1406 1719 -c 1404 1721 1403 1723 1403 1726 -c 1403 1729 1404 1731 1406 1733 -c 1408 1735 1410 1736 1413 1736 -c 1416 1736 1419 1735 1421 1733 -c 1423 1731 1424 1729 1424 1726 -c C 
+1501 1749 M 1485 1749 I 1485 1744 I 1483 1746 1481 1747 1480 1748 -c 1477 1750 1474 1750 1471 1750 -c 1465 1750 1460 1748 1456 1744 -c 1450 1740 1448 1734 1448 1726 -c 1448 1718 1450 1712 1456 1708 -c 1460 1704 1465 1702 1470 1702 -c 1474 1702 1477 1703 1480 1704 -c 1481 1705 1483 1706 1485 1708 -c 1485 1704 I 1501 1704 I 1501 1749 I C 
+1485 1726 M 1485 1723 1484 1721 1482 1719 -c 1480 1717 1478 1716 1475 1716 -c 1472 1716 1469 1717 1467 1719 -c 1465 1721 1464 1724 1464 1726 -c 1464 1729 1465 1731 1467 1733 -c 1469 1735 1471 1736 1475 1736 -c 1478 1736 1480 1735 1482 1733 -c 1484 1731 1485 1729 1485 1726 -c C 
+1546 1748 M 1542 1750 1539 1750 1535 1750 -c 1527 1750 1520 1748 1516 1742 -c 1512 1737 1510 1732 1510 1726 -c 1510 1720 1512 1715 1516 1710 -c 1521 1705 1527 1702 1535 1702 -c 1539 1702 1542 1703 1546 1705 -c 1546 1718 I 1543 1716 1540 1715 1537 1715 -c 1534 1715 1532 1716 1529 1718 -c 1527 1720 1526 1723 1526 1726 -c 1526 1729 1527 1732 1529 1734 -c 1531 1736 1534 1737 1537 1737 -c 1540 1737 1543 1736 1546 1734 -c 1546 1748 I C 
+1571 1686 M 1571 1689 1571 1691 1569 1692 -c 1567 1694 1565 1695 1562 1695 -c 1560 1695 1558 1694 1556 1692 -c 1554 1691 1553 1689 1553 1686 -c 1553 1684 1554 1681 1556 1680 -c 1558 1678 1560 1677 1562 1677 -c 1565 1677 1567 1678 1569 1680 -c 1571 1682 1571 1684 1571 1686 -c C 
+1570 1749 M 1554 1749 I 1554 1704 I 1570 1704 I 1570 1749 I C 
+1630 1729 M 1596 1729 I 1596 1736 1599 1739 1606 1739 -c 1609 1739 1612 1738 1613 1735 -c 1629 1735 I 1628 1739 1626 1742 1623 1745 -c 1619 1749 1613 1751 1606 1751 -c 1597 1751 1590 1748 1585 1742 -c 1581 1738 1580 1733 1580 1727 -c 1580 1720 1582 1714 1586 1709 -c 1591 1704 1597 1702 1605 1702 -c 1615 1702 1622 1706 1626 1713 -c 1628 1717 1630 1722 1630 1727 -c 1630 1729 I C 
+1615 1720 M 1614 1715 1610 1712 1606 1712 -c 1603 1712 1601 1713 1599 1715 -c 1598 1716 1597 1718 1596 1720 -c 1615 1720 I C 
+1686 1749 M 1670 1749 I 1670 1726 I 1670 1722 1670 1719 1669 1718 -c 1668 1716 1666 1715 1663 1715 -c 1660 1715 1658 1716 1657 1718 -c 1655 1719 1654 1721 1654 1725 -c 1654 1749 I 1638 1749 I 1638 1704 I 1654 1704 I 1654 1709 I 1656 1707 1658 1706 1660 1705 -c 1662 1703 1665 1703 1669 1703 -c 1674 1703 1678 1704 1681 1706 -c 1685 1709 1686 1714 1686 1720 -c 1686 1749 I C 
+1724 1717 M 1715 1717 I 1715 1749 I 1699 1749 I 1699 1717 I 1694 1717 I 1694 1704 I 1699 1704 I 1699 1690 I 1715 1690 I 1715 1704 I 1724 1704 I 1724 1717 I C 
+1779 1732 M 1779 1741 1775 1746 1767 1749 -c 1764 1750 1759 1751 1755 1751 -c 1745 1751 1738 1748 1734 1744 -c 1732 1741 1730 1737 1730 1732 -c 1730 1704 I 1746 1704 I 1746 1729 I 1746 1732 1747 1734 1749 1735 -c 1750 1737 1752 1738 1755 1738 -c 1757 1738 1759 1737 1761 1735 -c 1762 1734 1763 1732 1763 1729 -c 1763 1704 I 1779 1704 I 1779 1732 I C 
+1805 1749 M 1789 1749 I 1789 1675 I 1805 1675 I 1805 1749 I C 
+1827 1719 M 1827 1721 1827 1722 1826 1723 -c 1825 1724 1823 1725 1821 1725 -c 1820 1725 1818 1724 1817 1723 -c 1816 1722 1815 1720 1815 1719 -c 1815 1717 1816 1716 1817 1715 -c 1818 1714 1820 1713 1821 1713 -c 1823 1713 1824 1713 1826 1715 -c 1827 1716 1827 1717 1827 1719 -c C 
+1827 1744 M 1827 1746 1827 1747 1826 1748 -c 1825 1749 1823 1750 1821 1750 -c 1820 1750 1818 1749 1817 1748 -c 1816 1747 1815 1746 1815 1744 -c 1815 1742 1816 1741 1817 1740 -c 1818 1739 1820 1738 1821 1738 -c 1823 1738 1824 1739 1826 1740 -c 1827 1741 1827 1742 1827 1744 -c C 
+1937 1749 M 1919 1749 I 1915 1737 I 1891 1737 I 1886 1749 I 1868 1749 I 1893 1682 I 1912 1682 I 1937 1749 I C 
+1910 1724 M 1903 1703 I 1895 1724 I 1910 1724 I C 
+1959 1749 M 1943 1749 I 1943 1675 I 1959 1675 I 1959 1749 I C 
+1997 1717 M 1988 1717 I 1988 1749 I 1972 1749 I 1972 1717 I 1967 1717 I 1967 1704 I 1972 1704 I 1972 1690 I 1988 1690 I 1988 1704 I 1997 1704 I 1997 1717 I C 
+2052 1732 M 2052 1741 2048 1746 2040 1749 -c 2037 1750 2032 1751 2028 1751 -c 2018 1751 2011 1748 2007 1744 -c 2005 1741 2003 1737 2003 1732 -c 2003 1704 I 2019 1704 I 2019 1729 I 2019 1732 2020 1734 2022 1735 -c 2023 1737 2025 1738 2028 1738 -c 2030 1738 2032 1737 2034 1735 -c 2035 1734 2036 1732 2036 1729 -c 2036 1704 I 2052 1704 I 2052 1732 I C 
+2078 1749 M 2062 1749 I 2062 1675 I 2078 1675 I 2078 1749 I C 
+ L N 557 1832 M 557 1839 555 1845 551 1851 -c 547 1857 542 1861 535 1864 -c 532 1865 528 1865 525 1865 -c 499 1865 I 499 1799 I 525 1799 I 531 1799 537 1801 542 1804 -c 547 1807 551 1812 554 1818 -c 556 1822 557 1827 557 1832 -c C 
+539 1832 M 539 1828 538 1824 536 1820 -c 532 1816 527 1813 520 1813 -c 516 1813 I 516 1851 I 520 1851 I 527 1851 532 1849 536 1844 -c 538 1841 539 1837 539 1832 -c C 
+618 1865 M 602 1865 I 602 1860 I 600 1862 598 1864 597 1865 -c 594 1866 591 1867 588 1867 -c 582 1867 577 1865 573 1861 -c 567 1856 565 1850 565 1843 -c 565 1835 567 1829 573 1824 -c 577 1820 582 1819 587 1819 -c 591 1819 594 1819 597 1821 -c 598 1822 600 1823 602 1825 -c 602 1820 I 618 1820 I 618 1865 I C 
+602 1843 M 602 1840 601 1838 599 1836 -c 597 1834 595 1833 592 1833 -c 589 1833 586 1834 584 1836 -c 582 1838 581 1840 581 1843 -c 581 1845 582 1848 584 1850 -c 586 1852 588 1853 592 1853 -c 595 1853 597 1852 599 1850 -c 601 1848 602 1846 602 1843 -c C 
+655 1833 M 646 1833 I 646 1865 I 630 1865 I 630 1833 I 625 1833 I 625 1820 I 630 1820 I 630 1807 I 646 1807 I 646 1820 I 655 1820 I 655 1833 I C 
+713 1865 M 697 1865 I 697 1860 I 695 1862 693 1864 692 1865 -c 689 1866 686 1867 683 1867 -c 677 1867 672 1865 668 1861 -c 662 1856 660 1850 660 1843 -c 660 1835 662 1829 668 1824 -c 672 1820 677 1819 682 1819 -c 686 1819 689 1819 692 1821 -c 693 1822 695 1823 697 1825 -c 697 1820 I 713 1820 I 713 1865 I C 
+697 1843 M 697 1840 696 1838 694 1836 -c 692 1834 690 1833 687 1833 -c 684 1833 681 1834 679 1836 -c 677 1838 676 1840 676 1843 -c 676 1845 677 1848 679 1850 -c 681 1852 683 1853 687 1853 -c 690 1853 692 1852 694 1850 -c 696 1848 697 1846 697 1843 -c C 
+734 1836 M 734 1837 734 1839 733 1840 -c 732 1841 730 1841 728 1841 -c 727 1841 725 1841 724 1840 -c 723 1839 722 1837 722 1836 -c 722 1834 723 1832 724 1831 -c 725 1830 727 1830 728 1830 -c 730 1830 731 1830 733 1831 -c 734 1832 734 1834 734 1836 -c C 
+734 1861 M 734 1862 734 1864 733 1865 -c 732 1866 730 1866 728 1866 -c 727 1866 725 1866 724 1865 -c 723 1864 722 1862 722 1861 -c 722 1859 723 1858 724 1856 -c 725 1855 727 1855 728 1855 -c 730 1855 731 1855 733 1856 -c 734 1857 734 1859 734 1861 -c C 
+812 1855 M 808 1865 I 778 1865 I 778 1865 I 794 1844 I 796 1841 798 1838 798 1836 -c 798 1833 797 1831 795 1830 -c 793 1829 791 1828 788 1828 -c 786 1828 784 1829 781 1830 -c 781 1820 I 784 1819 788 1819 791 1819 -c 796 1819 800 1820 804 1823 -c 807 1826 809 1829 809 1833 -c 809 1837 807 1841 805 1845 -c 798 1855 I 812 1855 I C 
+854 1855 M 850 1865 I 820 1865 I 820 1865 I 836 1844 I 838 1841 840 1838 840 1836 -c 840 1833 839 1831 837 1830 -c 835 1829 833 1828 830 1828 -c 828 1828 826 1829 823 1830 -c 823 1820 I 826 1819 830 1819 833 1819 -c 838 1819 842 1820 846 1823 -c 849 1826 851 1829 851 1833 -c 851 1837 849 1841 847 1845 -c 840 1855 I 854 1855 I C 
+884 1848 M 862 1848 I 862 1838 I 884 1838 I 884 1848 I C 
+926 1851 M 926 1856 924 1859 921 1862 -c 917 1865 913 1866 908 1866 -c 903 1866 899 1866 895 1864 -c 898 1854 I 902 1856 906 1857 908 1857 -c 910 1857 912 1856 913 1855 -c 915 1854 915 1853 915 1851 -c 915 1849 914 1848 913 1847 -c 911 1846 909 1845 907 1845 -c 906 1845 905 1845 904 1845 -c 904 1838 I 910 1838 913 1836 913 1833 -c 913 1831 913 1830 911 1829 -c 910 1828 908 1828 906 1828 -c 904 1828 901 1829 899 1830 -c 899 1820 I 902 1819 905 1819 909 1819 -c 913 1819 916 1820 919 1821 -c 922 1824 924 1827 924 1831 -c 924 1835 922 1838 919 1840 -c 921 1841 923 1842 924 1844 -c 925 1846 926 1849 926 1851 -c C 
+957 1848 M 935 1848 I 935 1838 I 957 1838 I 957 1848 I C 
+1000 1855 M 996 1865 I 966 1865 I 966 1865 I 982 1844 I 984 1841 986 1838 986 1836 -c 986 1833 985 1831 983 1830 -c 981 1829 979 1828 976 1828 -c 974 1828 972 1829 969 1830 -c 969 1820 I 972 1819 976 1819 979 1819 -c 984 1819 988 1820 992 1823 -c 995 1826 997 1829 997 1833 -c 997 1837 995 1841 993 1845 -c 986 1855 I 1000 1855 I C 
+1042 1842 M 1042 1849 1040 1855 1037 1859 -c 1034 1864 1030 1866 1025 1866 -c 1020 1866 1015 1864 1012 1859 -c 1009 1855 1008 1849 1008 1842 -c 1008 1835 1010 1830 1012 1826 -c 1015 1821 1020 1819 1025 1819 -c 1030 1819 1034 1821 1037 1826 -c 1040 1830 1042 1835 1042 1842 -c C 
+1031 1842 M 1031 1838 1030 1835 1029 1833 -c 1028 1830 1027 1829 1025 1829 -c 1023 1829 1022 1830 1020 1833 -c 1019 1835 1019 1838 1019 1842 -c 1019 1851 1021 1856 1025 1856 -c 1029 1856 1031 1851 1031 1842 -c C 
+1084 1842 M 1084 1849 1082 1855 1079 1859 -c 1076 1864 1072 1866 1067 1866 -c 1062 1866 1057 1864 1054 1859 -c 1051 1855 1050 1849 1050 1842 -c 1050 1835 1052 1830 1054 1826 -c 1057 1821 1062 1819 1067 1819 -c 1072 1819 1076 1821 1079 1826 -c 1082 1830 1084 1835 1084 1842 -c C 
+1073 1842 M 1073 1838 1072 1835 1071 1833 -c 1070 1830 1069 1829 1067 1829 -c 1065 1829 1064 1830 1062 1833 -c 1061 1835 1061 1838 1061 1842 -c 1061 1851 1063 1856 1067 1856 -c 1071 1856 1073 1851 1073 1842 -c C 
+1126 1820 M 1107 1865 I 1096 1865 I 1111 1828 I 1095 1828 I 1099 1820 I 1126 1820 I C 
+ L N 538 1930 M 524 1930 I 524 1982 I 507 1982 I 507 1930 I 493 1930 I 493 1915 I 538 1915 I 538 1930 I C 
+585 1930 M 571 1930 I 571 1982 I 554 1982 I 554 1930 I 540 1930 I 540 1915 I 585 1915 I 585 1930 I C 
+632 1930 M 618 1930 I 618 1982 I 601 1982 I 601 1930 I 587 1930 I 587 1915 I 632 1915 I 632 1930 I C 
+ L N 557 2065 M 557 2072 555 2079 551 2085 -c 547 2091 542 2095 535 2097 -c 532 2098 528 2099 525 2099 -c 499 2099 I 499 2032 I 525 2032 I 531 2032 537 2034 542 2037 -c 547 2041 551 2045 554 2051 -c 556 2056 557 2060 557 2065 -c C 
+539 2065 M 539 2061 538 2057 536 2053 -c 532 2049 527 2047 520 2047 -c 516 2047 I 516 2084 I 520 2084 I 527 2084 532 2082 536 2078 -c 538 2074 539 2070 539 2065 -c C 
+619 2076 M 619 2082 617 2088 613 2092 -c 608 2098 601 2101 592 2101 -c 583 2101 576 2098 571 2092 -c 567 2088 565 2082 565 2076 -c 565 2070 567 2065 571 2060 -c 576 2055 583 2052 592 2052 -c 601 2052 608 2055 613 2060 -c 617 2065 619 2070 619 2076 -c C 
+603 2076 M 603 2073 602 2071 599 2069 -c 597 2067 595 2066 592 2066 -c 589 2066 586 2067 584 2069 -c 582 2071 581 2074 581 2076 -c 581 2079 582 2081 584 2083 -c 586 2085 589 2087 592 2087 -c 595 2087 597 2086 599 2084 -c 601 2082 603 2079 603 2076 -c C 
+663 2098 M 659 2100 656 2100 652 2100 -c 644 2100 637 2098 633 2092 -c 629 2087 627 2082 627 2076 -c 627 2070 629 2065 633 2060 -c 638 2055 644 2052 652 2052 -c 656 2052 659 2053 663 2055 -c 663 2068 I 660 2066 657 2065 654 2065 -c 651 2065 649 2066 646 2068 -c 644 2070 643 2073 643 2076 -c 643 2079 644 2082 646 2084 -c 648 2086 651 2087 654 2087 -c 657 2087 660 2086 663 2084 -c 663 2098 I C 
+698 2067 M 689 2067 I 689 2099 I 673 2099 I 673 2067 I 668 2067 I 668 2054 I 673 2054 I 673 2040 I 689 2040 I 689 2054 I 698 2054 I 698 2067 I C 
+757 2076 M 757 2082 755 2088 751 2092 -c 746 2098 739 2101 730 2101 -c 721 2101 714 2098 709 2092 -c 705 2088 703 2082 703 2076 -c 703 2070 705 2065 709 2060 -c 714 2055 721 2052 730 2052 -c 739 2052 746 2055 751 2060 -c 755 2065 757 2070 757 2076 -c C 
+741 2076 M 741 2073 740 2071 737 2069 -c 735 2067 733 2066 730 2066 -c 727 2066 724 2067 722 2069 -c 720 2071 719 2074 719 2076 -c 719 2079 720 2081 722 2083 -c 724 2085 727 2087 730 2087 -c 733 2087 735 2086 737 2084 -c 739 2082 741 2079 741 2076 -c C 
+800 2068 M 798 2067 796 2067 794 2067 -c 788 2067 785 2069 783 2073 -c 783 2075 782 2077 782 2079 -c 782 2099 I 766 2099 I 766 2054 I 782 2054 I 782 2061 I 784 2058 786 2056 788 2055 -c 791 2054 794 2053 797 2053 -c 798 2053 799 2053 800 2053 -c 800 2068 I C 
+818 2069 M 818 2071 818 2072 817 2073 -c 816 2074 814 2075 812 2075 -c 811 2075 809 2074 808 2073 -c 807 2072 806 2070 806 2069 -c 806 2067 807 2066 808 2065 -c 809 2064 811 2063 812 2063 -c 814 2063 815 2063 817 2065 -c 818 2066 818 2067 818 2069 -c C 
+818 2094 M 818 2096 818 2097 817 2098 -c 816 2099 814 2100 812 2100 -c 811 2100 809 2099 808 2098 -c 807 2097 806 2096 806 2094 -c 806 2092 807 2091 808 2090 -c 809 2089 811 2088 812 2088 -c 814 2088 815 2089 817 2090 -c 818 2091 818 2092 818 2094 -c C 
+923 2065 M 923 2072 921 2079 917 2085 -c 913 2091 908 2095 901 2097 -c 898 2098 894 2099 891 2099 -c 865 2099 I 865 2032 I 891 2032 I 897 2032 903 2034 908 2037 -c 913 2041 917 2045 920 2051 -c 922 2056 923 2060 923 2065 -c C 
+905 2065 M 905 2061 904 2057 902 2053 -c 898 2049 893 2047 886 2047 -c 882 2047 I 882 2084 I 886 2084 I 893 2084 898 2082 902 2078 -c 904 2074 905 2070 905 2065 -c C 
+944 2094 M 944 2095 944 2097 943 2098 -c 942 2099 940 2100 939 2100 -c 937 2100 936 2099 934 2098 -c 933 2097 933 2095 933 2094 -c 933 2092 933 2091 934 2090 -c 935 2089 937 2088 939 2088 -c 940 2088 942 2088 943 2090 -c 944 2091 944 2092 944 2094 -c C 
+1055 2066 M 1055 2075 1052 2083 1046 2090 -c 1039 2097 1030 2101 1018 2101 -c 1006 2101 997 2097 990 2090 -c 984 2083 981 2075 981 2066 -c 981 2062 982 2057 983 2053 -c 985 2049 987 2045 990 2042 -c 997 2034 1006 2030 1018 2030 -c 1030 2030 1039 2034 1046 2042 -c 1052 2049 1055 2057 1055 2066 -c C 
+1037 2066 M 1037 2061 1035 2057 1032 2054 -c 1028 2049 1024 2047 1018 2047 -c 1014 2047 1010 2048 1007 2050 -c 1004 2052 1002 2056 1000 2059 -c 999 2061 999 2064 999 2066 -c 999 2070 1001 2074 1004 2078 -c 1007 2082 1012 2084 1018 2084 -c 1024 2084 1029 2082 1032 2078 -c 1035 2074 1037 2070 1037 2066 -c C 
+1099 2098 M 1095 2100 1092 2100 1088 2100 -c 1080 2100 1073 2098 1069 2092 -c 1065 2087 1063 2082 1063 2076 -c 1063 2070 1065 2065 1069 2060 -c 1074 2055 1080 2052 1088 2052 -c 1092 2052 1095 2053 1099 2055 -c 1099 2068 I 1096 2066 1093 2065 1090 2065 -c 1087 2065 1085 2066 1082 2068 -c 1080 2070 1079 2073 1079 2076 -c 1079 2079 1080 2082 1082 2084 -c 1084 2086 1087 2087 1090 2087 -c 1093 2087 1096 2086 1099 2084 -c 1099 2098 I C 
+1134 2067 M 1125 2067 I 1125 2099 I 1109 2099 I 1109 2067 I 1104 2067 I 1104 2054 I 1109 2054 I 1109 2040 I 1125 2040 I 1125 2054 I 1134 2054 I 1134 2067 I C 
+1193 2076 M 1193 2082 1191 2088 1187 2092 -c 1182 2098 1175 2101 1166 2101 -c 1157 2101 1150 2098 1145 2092 -c 1141 2088 1139 2082 1139 2076 -c 1139 2070 1141 2065 1145 2060 -c 1150 2055 1157 2052 1166 2052 -c 1175 2052 1182 2055 1187 2060 -c 1191 2065 1193 2070 1193 2076 -c C 
+1177 2076 M 1177 2073 1176 2071 1173 2069 -c 1171 2067 1169 2066 1166 2066 -c 1163 2066 1160 2067 1158 2069 -c 1156 2071 1155 2074 1155 2076 -c 1155 2079 1156 2081 1158 2083 -c 1160 2085 1163 2087 1166 2087 -c 1169 2087 1171 2086 1173 2084 -c 1175 2082 1177 2079 1177 2076 -c C 
+1236 2068 M 1234 2067 1232 2067 1230 2067 -c 1224 2067 1221 2069 1219 2073 -c 1219 2075 1218 2077 1218 2079 -c 1218 2099 I 1202 2099 I 1202 2054 I 1218 2054 I 1218 2061 I 1220 2058 1222 2056 1224 2055 -c 1227 2054 1230 2053 1233 2053 -c 1234 2053 1235 2053 1236 2053 -c 1236 2068 I C 
+ L 492 2215 M <05>S 
+N 524 2300 M 515 2300 I 515 2332 I 499 2332 I 499 2300 I 494 2300 I 494 2287 I 499 2287 I 499 2273 I 515 2273 I 515 2287 I 524 2287 I 524 2300 I C 
+579 2312 M 545 2312 I 545 2319 548 2323 555 2323 -c 558 2323 561 2321 562 2318 -c 578 2318 I 577 2322 575 2326 572 2328 -c 568 2332 562 2334 555 2334 -c 546 2334 539 2331 534 2325 -c 530 2321 529 2316 529 2310 -c 529 2303 531 2297 535 2292 -c 540 2288 546 2286 554 2286 -c 564 2286 571 2289 575 2296 -c 577 2300 579 2305 579 2310 -c 579 2312 I C 
+564 2303 M 563 2298 559 2296 555 2296 -c 552 2296 550 2297 548 2298 -c 547 2299 546 2301 545 2303 -c 564 2303 I C 
+624 2317 M 624 2322 623 2326 619 2329 -c 615 2332 610 2334 603 2334 -c 597 2334 591 2332 585 2329 -c 591 2317 I 595 2320 599 2322 603 2322 -c 607 2322 608 2321 608 2318 -c 608 2317 608 2316 607 2316 -c 606 2315 604 2315 601 2314 -c 598 2313 597 2313 596 2313 -c 593 2311 590 2309 589 2307 -c 588 2305 588 2303 588 2301 -c 588 2297 590 2294 592 2291 -c 596 2287 601 2285 608 2285 -c 613 2285 618 2286 623 2288 -c 618 2299 I 615 2297 612 2296 609 2296 -c 606 2296 604 2297 604 2300 -c 604 2301 605 2301 606 2302 -c 607 2302 608 2303 611 2303 -c 615 2304 619 2306 621 2307 -c 623 2310 624 2313 624 2317 -c C 
+659 2300 M 650 2300 I 650 2332 I 634 2332 I 634 2300 I 629 2300 I 629 2287 I 634 2287 I 634 2273 I 650 2273 I 650 2287 I 659 2287 I 659 2300 I C 
+ L LH
+(%%[Page: 1]%%) = 
+%%PageTrailer
+
+%%Trailer
+%%BoundingBox: 13 13 599 780
+%%DocumentNeededResources: 
+%%DocumentSuppliedResources: 
+%%+ procset Pscript_WinNT_ErrorHandler 5.0 0
+%%+ procset Pscript_FatalError 5.0 0
+%%+ procset Pscript_Win_Basic 5.0 0
+%%+ procset Pscript_Win_Utils_L2 5.0 0
+%%+ procset Pscript_Win_Dib_L2 5.0 0
+%%+ procset Pscript_T42Hdr 5.0 0
+%%+ procset Pscript_Text 5.0 0
+%%+ procset Pscript_Win_GdiObject 5.0 0
+%%+ procset Pscript_Win_GdiObject_L3 5.0 0
+Pscript_WinNT_Incr dup /terminate get exec
+ehsave restore
+%%Pages: 1
+(%%[LastPage]%%) = 
+%%EOF
+%-12345X
