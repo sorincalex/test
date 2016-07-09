@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<database name="c:\\Medsoft\\Chadi.fdb" type="firebird">
+</database>
+<server name="NLYBSTQVP4NB3GB">
+</server>
+<logo path="c:\\MedSoft\\dacia.jpg" text="Dacia Medical Center, B-dul Dacia 101, ap. 1, Sector 2, Bucuresti | Tel.: 0212115405">
+</logo>
+</config>
